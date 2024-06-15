@@ -1,0 +1,69 @@
+.animacao-inicial,
+.animacao-inicial2,
+.animacao-inicial3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+.animacao-inicial {
+  background-color: var(--tertiary);
+  z-index: 23;
+  animation: cortinas 1s ease-in-out forwards;
+}
+.animacao-inicial2 {
+  background-color: var(--sombra-2);
+  z-index: 22;
+  animation: cortinas 1s ease-in-out forwards;
+  animation-delay: 50ms;
+}
+.animacao-inicial3 {
+  background-color: var(--primary);
+  z-index: 21;
+  animation: cortinas 1s ease-in-out forwards;
+  animation-delay: 100ms;
+}
+
+h2 {
+  color: transparent;
+  background: linear-gradient(
+    var(--tertiary) 50%, var(--bg) 50%
+  );
+  background-clip: text;
+  font-family: 'Righteous', sans-serif;
+  font-style: normal;
+  font-size: 10rem;
+  text-transform: uppercase;
+  z-index: 9;
+  transition: 200ms;
+}
+h3 {
+  color: var(--primary);
+  font-family: 'Righteous', sans-serif;
+  font-style: normal;
+  font-size: 5rem;
+  text-shadow: 0px 6px 0px var(--sombra);
+  text-transform: uppercase;
+
+  span {
+    color: var(--secundary);
+    margin-left: 5px;
+  }
+}
+h4 {
+  color: var(--primary);
+  font-family: 'Righteous', sans-serif;
+  font-style: normal;
+  font-size: 4rem;
+  text-shadow: 0px 4px 0px var(--sombra);
+  text-transform: uppercase;
+}
+
+
+.body-container {
+  display: flex;
+  gap: 20px;
+}
+section {
+  overflow-x: hidden;
+}

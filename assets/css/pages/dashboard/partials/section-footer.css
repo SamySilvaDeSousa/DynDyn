@@ -1,0 +1,19 @@
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .creditos-footer {
+    border-radius: 15px;
+    width: 100%;
+    padding: 20px 0px;
+    margin-top: 20px;
+    background-color: var(--tertiary);
+
+    p {
+      color: var(--secundary);
+      font-size: 2rem;
+      text-align: center;
+    }
+  }
+}

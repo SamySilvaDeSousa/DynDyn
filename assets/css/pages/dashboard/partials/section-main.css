@@ -1,0 +1,10 @@
+main {
+  display: flex;
+  list-style: none;
+  border-radius: 15px;
+  width: 100%;
+  height: calc(100vh - 126px);
+  background-color: var(--tertiary);
+  margin: 0px auto;
+  overflow-x: hidden;
+}

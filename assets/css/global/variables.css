@@ -1,0 +1,11 @@
+:root {
+  --primary: rgb(0, 212, 141);
+  --secundary: black;
+  --tertiary: #e6f8f2;
+  --bg: #ceeee2;
+  --sombra: rgb(229, 236, 229);
+  --sombra-2: rgb(17, 237, 167);
+
+  --tertiary-vanish: rgba(0, 45, 111, 0);
+  --vanish: rgba(255,255,255,0);
+}
