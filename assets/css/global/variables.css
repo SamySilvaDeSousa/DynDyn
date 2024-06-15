@@ -1,11 +1,20 @@
 :root {
-  --primary: rgb(0, 212, 141);
-  --secundary: black;
-  --tertiary: #e6f8f2;
-  --bg: #ceeee2;
-  --sombra: rgb(229, 236, 229);
-  --sombra-2: rgb(17, 237, 167);
+  --primary: rgb(255, 255, 255);
+  --secondary: black;
+  --tertiary: #d1d5db;
+  --bg: #e5e6eb;
+  --sombra: #e5e7eb;
+  --sombra-2: rgb(65, 65, 65);
 
   --tertiary-vanish: rgba(0, 45, 111, 0);
   --vanish: rgba(255,255,255,0);
+}
+
+.tema-dark {
+  --primary: #3f3f46;
+  --secondary: white;
+  --tertiary: #18181b;
+  --bg: #272729;
+  --sombra: rgb(50, 50, 50);
+  --sombra-2: #a0a0a0;
 }

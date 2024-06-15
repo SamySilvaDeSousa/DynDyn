@@ -1,4 +1,5 @@
 footer {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6,14 +7,27 @@ footer {
   .creditos-footer {
     border-radius: 15px;
     width: 100%;
-    padding: 20px 0px;
-    margin-top: 20px;
-    background-color: var(--tertiary);
+    margin-top: 10px;
 
     p {
-      color: var(--secundary);
+      color: var(--secondary);
       font-size: 2rem;
       text-align: center;
+    }
+    a {
+      position: absolute;
+      top: 5px;
+      right: 20px;
+
+      ion-icon {
+        color: var(--secondary);
+        font-size: 3rem;
+        cursor: pointer;
+
+        &:hover {
+          color: var(--tertiary);
+        }
+      }
     }
   }
 }

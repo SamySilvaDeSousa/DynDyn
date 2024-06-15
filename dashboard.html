@@ -13,16 +13,12 @@
   <link rel="icon" href="./assets/files/images/global/favicon.svg" type="image/x-icon"> <!--FAVICON-->
 
   <link rel="stylesheet" href="./assets/css/pages/dashboard/dashboard.css"> <!--CSS-->
-  
+
 </head>
 
 <body>
-
-  <div class="animacao-inicial"></div>
-  <div class="animacao-inicial2"></div>
-  <div class="animacao-inicial3"></div>
-
-    <!--
+  
+  <!--
   ██   ██ ███████  █████  ██████  ███████ ██████  
   ██   ██ ██      ██   ██ ██   ██ ██      ██   ██ 
   ███████ █████   ███████ ██   ██ █████   ██████  
@@ -33,30 +29,96 @@
   <div class="body-container">
     <header id="sidebar">
       <div class="sidebar-top">
-        <a id="logo" href="dashboard.html">DynDyn</a>
+        <h1 class="logo">DynDyn</h1>
+        <button class="botao-novo"><span class="material-symbols-outlined">add</span>Novo</button>
         <nav class="menu">
           <a id="nav-start" class="nav-link" href="#"><span class="material-symbols-outlined">home</span> Dashboard</a>
-          <a class="nav-link" href="#"><span class="material-symbols-outlined">format_list_bulleted</span> Transações</a>
-          <a class="nav-link" href="#"><span class="material-symbols-outlined">contract</span> Relatórios</a>
+          <a class="nav-link" href="#"><span class="material-symbols-outlined">segment</span> Transações</a>
+          <a class="nav-link" href="#"><span class="material-symbols-outlined">monitoring</span> Relatórios</a>
           <a id="nav-end" class="nav-link" href="#"><span class="material-symbols-outlined">account_balance</span> Contas</a>
         </nav>
       </div>
       <div class="sidebar-bottom">
-        <button id="botao-config"><span class="material-symbols-outlined">light_mode</span> Tema</a>
-        <button id="botao-sair"><span class="material-symbols-outlined">logout</span> Sair</a>
+        <button id="botao-sair"><span class="material-symbols-outlined">logout</span> Sair</button>
       </div>
     </header>
   
     <main>
-      <section id="" style="font-size: 50rem; width: 100%; ">
-        tstetestes
+
+      <div id="botao-tema">
+        <input id="check-tema" class="checkbox" type="checkbox">
+        <label for="check-tema">
+          <span class="light material-symbols-outlined">light_mode</span>
+          <span class="dark material-symbols-outlined">dark_mode</span>
+          <div class="circulo"></div>
+        </label>
+      </div>
+
+      <section id="dashboard">
+        <h2>Dashboard</h2>
+        <div class="dashboard-container">
+
+          <div class="card card-entradas">
+            <div class="card-entradas-container">
+              <p>Entradas</p>
+              <strong>R$ 1.000,00</strong>
+            </div>
+            <span class="material-symbols-outlined">add</span>
+          </div>
+
+          <div class="card card-saidas">
+            <div class="card-saidas-container">
+              <p>Saídas</p>
+              <strong>R$ 100,00</strong>
+            </div>
+            <span class="material-symbols-outlined">remove</span>
+          </div>
+
+          <div class="card card-total">
+            <div class="card-total-container">
+              <p>Total</p>
+              <strong>R$ 900,00</strong>
+            </div>
+            <span class="material-symbols-outlined">attach_money</span>
+          </div>
+          
+        </div>
+        <h3>Acesso Rápido</h3>
+        <div class="dashboard-atalho-container">
+          <div class="card-atalho card-entradas-atalho">
+            <span class="material-symbols-outlined">add</span>
+            <p>Entradas</p>
+          </div>
+          <div class="card-atalho card-saidas-atalho">
+            <span class="material-symbols-outlined">remove</span>
+            <p>Saídas</p>
+          </div>
+          <div class="card-atalho card-transferencia-atalho">
+            <span class="material-symbols-outlined">compare_arrows</span>
+            <p>Transferência</p>
+          </div>
+        </div>
+        <h3>Contas</h3>
+        <div class="card">
+          Teste
+        </div>
+
       </section>
     </main>
   </div>
 
+  <!--
+  ███████  ██████   ██████  ████████ ███████ ██████  
+  ██      ██    ██ ██    ██    ██    ██      ██   ██ 
+  █████   ██    ██ ██    ██    ██    █████   ██████  
+  ██      ██    ██ ██    ██    ██    ██      ██   ██ 
+  ██       ██████   ██████     ██    ███████ ██   ██ 
+  -->
+
   <footer>
     <div class="creditos-footer">
       <p>2024 &copy; Criado por Samy Silva de Sousa</p>
+      <a href="https://github.com/SamySilvaDeSousa" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
     </div>
   </footer>
 
@@ -68,8 +130,12 @@
   ███████  ██████ ██   ██ ██ ██         ██   
   -->
 
+  <script src="./assets/js/global/alterarTema.js"></script>
+
   <!--ÍCONES-->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
+  <link rel="stylesheet" href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <!--ÍCONES-->
 
   <!--ANIMAÇÕES-->

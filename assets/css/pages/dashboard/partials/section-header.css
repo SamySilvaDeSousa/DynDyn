@@ -7,61 +7,95 @@ header {
   gap: 20px;
   background-color: var(--tertiary);
   border-radius: 15px;
+  width: 300px;
+  margin: 20px 0px 0px 20px;
 
   .sidebar-top {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    padding: 0px 10px;
+  }
+  .sidebar-bottom {
+    width: 100%;
   }
 }
 
 
-#logo {
-  color: var(--primary);
+.logo {
+  color: var(--secondary);
   font-size: 4rem;
   font-family: "Zen Dots", sans-serif;
   font-weight: 400;
   font-style: normal;
-  margin: 20px auto;
+  margin: 20px auto 0px;
+}
+
+.botao-novo {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  padding: 10px;
+  margin: 20px 10px;
+  border: none;
+  border-radius: 15px;
+  font-size: 2.2rem;
   cursor: pointer;
+  color: var(--primary);
+  background-color: var(--secondary);
+
+  &:hover {
+    background-color: var(--sombra-2);
+  }
+
+  span {
+    font-size: 3.5rem;
+    cursor: pointer;
+  }
 }
 
 .menu {
   display: flex;
   flex-direction: column;
   list-style: none;
-  width: 250px;
-
+  width: 100%;
 
   a {
     display: flex;
     justify-content: start;
     align-items: center;
     gap: 20px;
-    color: var(--secundary);
+    color: var(--secondary);
     background-color: var(--tertiary);
     padding: 10px;
-    margin: 5px 10px;
+    margin: 5px 0px;
     font-size: 2.2rem;
-    font-weight: 500;
     cursor: pointer;
     border-radius: 15px;
-    transition: 100ms;
 
     &:hover {
-      background-color: var(--sombra);
+      background-color: var(--bg);
     }
 
     span {
-      color: var(--primary);
+      color: var(--secondary);
       font-size: 3.5rem;
       cursor: pointer;
     }
   }
   #nav-start {
+    color: var(--secondary);
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
+    background-color: var(--primary);
+
+    span {
+      color: var(--secondary);
+    }
   }
   #nav-end {
     border-bottom-right-radius: 15px;
@@ -69,13 +103,12 @@ header {
   }
 }
 
-#botao-sair,
-#botao-config  {
+#botao-sair {
   display: flex;
   justify-content: start;
   align-items: center;
   gap: 20px;
-  color: var(--secundary);
+  color: red;
   background-color: var(--tertiary);
   border: none;
   padding: 10px;
@@ -83,15 +116,19 @@ header {
   font-size: 2.2rem;
   cursor: pointer;
   border-radius: 15px;
-  transition: 100ms;
-  width: 163%;
+  width: 92%;
 
   &:hover {
-    background-color: var(--sombra);
+    color: var(--secondary);
+    background-color: firebrick;
+
+    span {
+      color: var(--secondary);
+    }
   }
 
   span {
-    color: var(--primary);
+    color: red;
     font-size: 3.5rem;
     cursor: pointer;
   }
