@@ -1,0 +1,17 @@
+#transacoes {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  padding: 60px 20px;
+  gap: 20px;
+  width: 100%;
+
+  h2 {
+    font-size: 4rem;
+  }
+  h3 {
+    font-size: 3rem;
+    margin-top: 20px;
+  }
+}

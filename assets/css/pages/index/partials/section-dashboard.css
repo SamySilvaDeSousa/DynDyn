@@ -1,0 +1,320 @@
+#dashboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  padding: 60px 20px;
+  gap: 20px;
+
+  h2 {
+    font-size: 4rem;
+  }
+  h3 {
+    font-size: 3rem;
+    margin-top: 20px;
+  }
+  .dashboard-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .dashboard-atalho-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 20px;
+  }
+}
+.card-entradas {
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
+
+  .card-entradas-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+    cursor: pointer;
+  
+    p {
+      font-size: 2.2rem;
+      cursor: pointer;
+    }
+    strong {
+      color: var(--green);
+      font-size: 4rem;
+      cursor: pointer;
+
+      span {
+        font-size: 2.5rem;
+        font-weight: 600;
+        border: none;
+      }
+    }
+  }
+
+  span {
+    font-size: 5rem;
+    color: var(--green);
+    border: 4px solid var(--green);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &:hover {
+    background-color: var(--primary);
+    cursor: pointer;
+  }
+}
+
+.card-saidas {
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
+
+
+  .card-saidas-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+    cursor: pointer;
+
+    p {
+      font-size: 2.2rem;
+      cursor: pointer;
+    }
+    strong {
+      color: red;
+      font-size: 4rem;
+      cursor: pointer;
+      
+      span {
+        font-size: 2.5rem;
+        font-weight: 600;
+        border: none;
+      }
+    }
+  }
+
+  span {
+    font-size: 5rem;
+    color: red;
+    border: 4px solid red;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &:hover {
+    background-color: var(--primary);
+    cursor: pointer;
+  }
+}
+
+.card-total {
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
+  background-color: var(--primary) !important;
+  border: 3px solid var(--secondary) !important;
+
+  .card-total-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+    cursor: pointer;
+  
+    p {
+      color: var(--secondary);
+      font-size: 2.2rem;
+      cursor: pointer;
+    }
+    strong {
+      color: var(--secondary);
+      font-size: 4rem;
+      cursor: pointer;
+      
+      span {
+        font-size: 2.5rem;
+        font-weight: 600;
+        border: none;
+      }
+    }
+  }
+
+  span {
+    font-size: 5rem;
+    color: var(--secondary);
+    border: 4px solid var(--secondary);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &:hover {
+    background-color: var(--secondary) !important;
+    cursor: pointer;
+
+    p,
+    strong,
+    span {
+      color: var(--primary);
+    }
+    span {
+      border: 4px solid var(--primary);
+    }
+  }
+}
+
+
+
+.card-entradas-atalho {
+
+  p {
+    font-size: 2.2rem;
+  }
+
+  span {
+    font-size: 5rem;
+    color: var(--green);
+    border: 4px solid var(--green);
+    border-radius: 50%;
+  }
+}
+.card-saidas-atalho {
+
+  p {
+    font-size: 2.2rem;
+  }
+
+  span {
+    font-size: 5rem;
+    color: red;
+    border: 4px solid red;
+    border-radius: 50%;
+  }
+}
+.card-transferencia-atalho {
+
+  p {
+    font-size: 2.2rem;
+  }
+
+  span {
+    font-size: 5rem;
+    color: var(--secondary);
+    border: 4px solid var(--secondary);
+    border-radius: 50%;
+  }
+}
+
+
+.card-contas {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 500px;
+  gap: 20px;
+
+  .saldo-total-contas-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    p {
+      font-size: 2rem;
+    }
+    strong {
+      color: var(--secondary);
+      font-size: 3rem;
+      
+      span {
+        font-size: 2rem;
+        font-weight: 700;
+        border: none;
+      }
+    }
+  }
+  .divisoria {
+    background-color: var(--tertiary);
+    border: none;
+    width: 100%;
+    height: 2px;
+  }
+  .card-contas-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 50px;
+
+    &:hover {
+      background-color: var(--primary);
+    }
+
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      cursor: pointer;
+    }
+
+    span {
+      font-size: 3rem;
+      background-color: var(--tertiary);
+      padding: 10px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    p {
+      font-size: 2rem;
+      cursor: pointer;
+    }
+    strong {
+      color: var(--secondary);
+      font-size: 2.5rem;
+      font-weight: 600;
+      cursor: pointer;
+
+            
+      span {
+        font-size: 1.5rem;
+        font-weight: 700;
+        background-color: var(--bg);
+        border: none;
+        margin-right: -5px;
+      }
+    }
+    &:hover > strong span {
+      background-color: var(--primary);
+    }
+  }
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: var(--secondary);
+    background-color: var(--primary);
+    border: 3px solid var(--secondary);
+    padding: 10px;
+    border-radius: 15px;
+    margin-top: 20px;
+    cursor: pointer;
+    width: 100%;
+
+    &:hover {
+      color: var(--primary);
+      background-color: var(--secondary);
+    }
+  }
+}
+

@@ -1,15 +1,15 @@
-::-webkit-scrollbar {
+*::-webkit-scrollbar {
   width: 12px;
   height: 12px;
 }
-::-webkit-scrollbar-track {
-
+*::-webkit-scrollbar-track {
+  color: red;
   margin: 10px 0px;
 }
-::-webkit-scrollbar-thumb {
-  color: var(--secondary);
+*::-webkit-scrollbar-thumb {
+  color: red;
   border-radius: 100px;
 }
-::-webkit-scrollbar-thumb:hover {
+*::-webkit-scrollbar-thumb:hover {
   border-color: var(--sombra-2);
 }

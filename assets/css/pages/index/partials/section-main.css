@@ -1,7 +1,9 @@
 main {
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   list-style: none;
   border-radius: 15px;
   width: 100%;
@@ -39,6 +41,10 @@ label {
   height: 26px;
   width: 55px;
   transform: scale(1.5);
+
+  &:hover {
+    background-color: var(--primary);
+  }
 
   .light,
   .dark {

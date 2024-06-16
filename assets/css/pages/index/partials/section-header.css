@@ -20,6 +20,7 @@ header {
   }
   .sidebar-bottom {
     width: 100%;
+    padding: 10px 10px;
   }
 }
 
@@ -45,11 +46,13 @@ header {
   border-radius: 15px;
   font-size: 2.2rem;
   cursor: pointer;
-  color: var(--primary);
-  background-color: var(--secondary);
+  color: var(--secondary);
+  background-color: var(--primary);
+  border: 3px solid var(--secondary);
 
   &:hover {
-    background-color: var(--sombra-2);
+    color: var(--primary);
+    background-color: var(--secondary);
   }
 
   span {
@@ -87,19 +90,8 @@ header {
       cursor: pointer;
     }
   }
-  #nav-start {
-    color: var(--secondary);
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
-    background-color: var(--primary);
-
-    span {
-      color: var(--secondary);
-    }
-  }
-  #nav-end {
-    border-bottom-right-radius: 15px;
-    border-bottom-left-radius: 15px;
+  #nav-dashboard {
+    background-color: var(--primary) !important;
   }
 }
 
@@ -112,18 +104,17 @@ header {
   background-color: var(--tertiary);
   border: none;
   padding: 10px;
-  margin: 10px;
   font-size: 2.2rem;
   cursor: pointer;
   border-radius: 15px;
-  width: 92%;
+  width: 100%;
 
   &:hover {
-    color: var(--secondary);
+    color: white;
     background-color: firebrick;
 
     span {
-      color: var(--secondary);
+      color: white;
     }
   }
 
