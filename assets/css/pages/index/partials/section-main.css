@@ -9,6 +9,7 @@ main {
   width: 100%;
   height: calc(100vh - 65px);
   background-color: var(--tertiary);
+  padding: 10px;
   margin: 20px 20px 0px 0px;
   overflow-x: hidden;
   transition: background 0.2s linear;

@@ -24,6 +24,10 @@ header {
   }
 }
 
+.ativo {
+  background-color: var(--primary) !important;
+}
+
 
 .logo {
   color: var(--secondary);
@@ -89,9 +93,6 @@ header {
       font-size: 3.5rem;
       cursor: pointer;
     }
-  }
-  #nav-dashboard {
-    background-color: var(--primary) !important;
   }
 }
 
