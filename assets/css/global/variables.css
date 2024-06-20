@@ -6,13 +6,10 @@
   --sombra: #e5e7eb;
   --sombra-2: rgb(65, 65, 65);
   --green: rgb(23, 179, 23);
-
-  --tertiary-vanish: rgba(0, 45, 111, 0);
-  --vanish: rgba(255,255,255,0);
 }
 
 .tema-dark {
-  --primary: #3f3f46;
+  --primary: #323239;
   --secondary: white;
   --tertiary: #18181b;
   --bg: #272729;

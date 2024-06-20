@@ -5,7 +5,7 @@ main {
   justify-content: center;
   align-items: center;
   list-style: none;
-  border-radius: 15px;
+  border-radius: 35px;
   width: 100%;
   height: calc(100vh - 65px);
   background-color: var(--tertiary);
@@ -42,6 +42,7 @@ label {
   height: 26px;
   width: 55px;
   transform: scale(1.5);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1) !important;
 
   &:hover {
     background-color: var(--primary);

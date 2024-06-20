@@ -127,8 +127,122 @@
 
       </section>
 
-      <section id="transacoes" class="section" style="display: none;">
+      <!--
+      ████████ ██████   █████  ███    ██ 
+         ██    ██   ██ ██   ██ ████   ██ 
+         ██    ██████  ███████ ██ ██  ██ 
+         ██    ██   ██ ██   ██ ██  ██ ██ 
+         ██    ██   ██ ██   ██ ██   ████ 
+      -->
+
+      <section id="transacoes" class="section">
         <h2>Transações</h2>
+        <div class="card transacoes-container">
+          <div class="transacoes-filtros">
+            <div class="transacoes-filtros-meses">
+              <span class="material-symbols-outlined">chevron_left</span>
+              <h4>Junho | 2024</h4>
+              <span class="material-symbols-outlined">chevron_right</span>
+            </div>
+            <div class="transacoes-filtros-geral">
+              <div class="transacoes-filtros-geral-left">
+                <span class="material-symbols-outlined">search</span>
+                <input type="text" placeholder="Pesquisar...">
+              </div>
+              <div class="transacoes-filtros-geral-right">
+                <span class="material-symbols-outlined">filter_list</span>
+                <h4>Filtrar</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="divisoria"></div>
+          
+          <div class="transacoes-tabela">
+            <table>
+              <thead>
+                <tr>
+                  <th>Descrição</th>
+                  <th>Conta</th>
+                  <th>Valor</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="td-flex">Ajuste de saldo</td>
+                  <td>Carteira</td>
+                  <td class="saldo-positivo">+1000,00</td>
+                </tr>
+                <tr>
+                  <td class="td-flex">Compras do Mês</td>
+                  <td>Carteira</td>
+                  <td class="saldo-negativo">-100,00</td>
+                </tr>
+                <tr>
+                  <td class="td-flex">Ajuste de saldo</td>
+                  <td>Carteira</td>
+                  <td class="saldo-positivo">+1000,00</td>
+                </tr>
+                <tr>
+                  <td class="td-flex">Compras do Mês</td>
+                  <td>Carteira</td>
+                  <td class="saldo-negativo">-100,00</td>
+                </tr>
+                <tr>
+                  <td class="td-flex">Ajuste de saldo</td>
+                  <td>Carteira</td>
+                  <td class="saldo-positivo">+1000,00</td>
+                </tr>
+                <tr>
+                  <td class="td-flex">Compras do Mês</td>
+                  <td>Carteira</td>
+                  <td class="saldo-negativo">-100,00</td>
+                </tr>
+                <tr>
+                  <td class="td-flex">Ajuste de saldo</td>
+                  <td>Carteira</td>
+                  <td class="saldo-positivo">+1000,00</td>
+                </tr>
+                <tr>
+                  <td class="td-flex">Compras do Mês</td>
+                  <td>Carteira</td>
+                  <td class="saldo-negativo">-100,00</td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+        </div>
+
+        <div class="card card-total">
+          <div class="card-total-container">
+            <p>Saldo Total</p>
+            <strong id="saldo-total"><span>R$</span> 900,00</strong>
+          </div>
+          <span class="material-symbols-outlined">attach_money</span>
+        </div>
+
+      </section>
+
+      <section id="contas" class="section">
+        <h2>Suas Contas</h2>
+        <div class="contas-container">
+          <div class="card card-contas">
+            <div class="saldo-total-contas-container">
+              <p>Saldo Total</p>
+              <strong id="saldo-total-contas"><span>R$</span> 900,00</strong>
+            </div>
+            <div class="divisoria"></div>
+            <div class="card-contas-container">
+              <div>
+                <span class="material-symbols-outlined">account_balance_wallet</span>
+                <p>Carteira</p>
+              </div>
+              <strong><span>R$</span>900,00</strong>
+            </div>
+            <a>Gerenciar Contas</a>
+          </div>
+        </div>
       </section>
 
     </main>
@@ -173,6 +287,12 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
   <!--ANIMAÇÕES-->
   
+  <noscript>
+    <div class="noscript">
+      <h1>Habilite o JavaScript!</h1>
+    </div>
+  </noscript>
+
 </body>
 
 </html>
