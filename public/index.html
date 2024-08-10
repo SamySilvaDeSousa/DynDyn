@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth overflow-x-hidden">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Samy Silva de Sousa">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta property="og:image" content="">
+  <title>DynDyn</title>
+  <link rel="icon" href="./assets/files/images/global/favicon.svg" type="image/x-icon"> <!--FAVICON-->
+
+  <link rel="stylesheet" href="../src/css/main.css"> <!--CSS-->
+  <script src="https://cdn.tailwindcss.com"></script> <!--TAILWIND CDN-->
+
+  <!--ÍCONES-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
+  <link rel="stylesheet" href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <!--ÍCONES-->
+
+</head>
+
+<body class="flex flex-col relative text-[--secondary] bg-[--bg] overflow-x-hidden">
+  
+  <!--
+  ██   ██ ███████  █████  ██████  ███████ ██████  
+  ██   ██ ██      ██   ██ ██   ██ ██      ██   ██ 
+  ███████ █████   ███████ ██   ██ █████   ██████  
+  ██   ██ ██      ██   ██ ██   ██ ██      ██   ██ 
+  ██   ██ ███████ ██   ██ ██████  ███████ ██   ██ 
+  -->
+
+  <div id="body-container" class="flex gap-5">
+    <header id="sidebar" class="relative flex flex-col justify-between items-start gap-5 bg-[--tertiary] w-[300px]">
+      <div id="sidebar-top" class="flex flex-col justify-center items-center w-full">
+        <h1 id="logo" class="text-blue-500 text-4xl mx-auto border-b-2 border-[--bg] py-5 w-full text-center">DynDyn</h1>
+        <button id="botao-novo" class="flex justify-start items-center gap-5 w-3/4 p-3 my-5 !mx-2 text-lg text-start cursor-pointer text-[--secondary] bg-[--primary] border-primary hover:border-blue-500 rounded-lg hover:text-[--primary] hover:bg-blue-500">
+          <span class="material-symbols-outlined text-2xl cursor-pointer">add</span>Novo
+        </button>
+        <nav id="menu" class="flex flex-col list-none border-t-2 border-[--bg] pt-5 w-full">
+          <a id="nav-dashboard" class="nav-link ativo flex justify-start items-center gap-5 text-[--secondary] bg-[--tertiary] p-3 pl-7 text-lg hover:bg-[--bg] cursor-pointer">
+            <span class="material-symbols-outlined text-[--secondary] text-2xl cursor-pointer">home</span> Painel
+          </a>
+          <a id="nav-transacoes" class="nav-link flex justify-start items-center gap-5 text-[--secondary] bg-[--tertiary] p-3 pl-7 text-lg hover:bg-[--bg] cursor-pointer">
+            <span class="material-symbols-outlined text-[--secondary] text-2xl cursor-pointer">segment</span> Transações
+          </a>
+          <a id="nav-relatorios" class="nav-link flex justify-start items-center gap-5 text-[--secondary] bg-[--tertiary] p-3 pl-7 text-lg hover:bg-[--bg] cursor-pointer">
+            <span class="material-symbols-outlined text-[--secondary] text-2xl cursor-pointer">monitoring</span> Relatórios
+          </a>
+          <a id="nav-contas" class="nav-link flex justify-start items-center gap-5 text-[--secondary] bg-[--tertiary] p-3 pl-7 text-lg hover:bg-[--bg] cursor-pointer">
+            <span class="material-symbols-outlined text-[--secondary] text-2xl cursor-pointer">account_balance</span> Contas
+          </a>
+        </nav>
+      </div>
+      <div id="sidebar-bottom" class="border-t-2 border-[--bg] w-full">
+        <button id="trocar-tema" class="flex justify-start items-center gap-5 text-[--secondary] bg-[--tertiary] border-none p-3 pl-7 text-lg w-full hover:bg-[--bg]">
+          <span class="material-symbols-outlined text-[--secondary] text-2xl cursor-pointer">contrast</span> Alterar Tema
+        </button>
+        <button id="botao-sair" class="flex justify-start items-center gap-5 text-red-600 bg-[--tertiary] border-none p-3 pl-7 text-lg w-full hover:text-white hover:bg-red-500 group">
+          <span class="material-symbols-outlined text-red-600 text-2xl group-hover:text-white cursor-pointer">logout</span> Sair
+        </button>
+      </div>
+    </header>
+  
+    <main id="main" class="relative flex flex-col justify-center items-center list-none w-full bg-[--bg] pr-4 overflow-hidden transition-all h-screen">
+
+      <!--
+      <div id="botao-tema" class="absolute top-5 right-6">
+        <input id="check-tema" class="opacity-0 absolute" type="checkbox">
+        <label for="check-tema" class="flex justify-between items-center p-1 relative w-14 h-7 bg-[--tertiary] rounded-full scale-150 hover:bg-[--primary]">
+          <span class="light material-symbols-outlined !text-lg text-[--secondary]">light_mode</span>
+          <span class="dark material-symbols-outlined !text-xl text-[--secondary]">dark_mode</span>
+          <div id="circulo" class="absolute top-[2px] left-[2px] w-6 h-6 cursor pointer bg-[--bg] rounded-full"></div>
+        </label>
+      </div>
+      -->
+
+      <div id="titulo" class="text-start w-full p-6">
+        <h2 class="flex justify-start items-end gap-1 text-xl font-medium"><span class="material-symbols-outlined text-[--secondary] text-2xl">home</span> Painel</h2>
+      </div>
+
+      <!--
+      ██████   █████  ███████ ██   ██ 
+      ██   ██ ██   ██ ██      ██   ██ 
+      ██   ██ ███████ ███████ ███████ 
+      ██   ██ ██   ██      ██ ██   ██ 
+      ██████  ██   ██ ███████ ██   ██ 
+      -->
+
+      <section id="dashboard" class="section flex flex-col justify-start items-center gap-5 px-5 p w-full h-full overflow-y-auto overflow-x-hidden">
+        <div id="dashboard-container" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 justify-center items-center gap-5 w-full">
+
+          <div class="flex flex-col justify-between items-start bg-[--tertiary] rounded-xl w-full self-stretch overflow-hidden">
+            <div class="flex justify-start items-center bg-[--primary] py-2 px-3 rounded-t-xl w-full">
+              <h3 class="text-xl text-blue-500">Total</h3>
+              <span class="material-symbols-outlined px-2 text-blue-500 text-xl">paid</span>
+            </div>
+            <strong id="saldo-entradas" class="flex items-end gap-1 text-[--secondary] text-3xl font-medium mt-5 px-3"><span class="text-2xl">R$</span> 900,00</strong>
+            <button id="botao-novo" class="flex justify-start items-center gap-5 p-1 px-3 my-5 !mx-3 text-base text-start text-[--secondary] bg-[--primary] border-primary rounded-lg hover:text-[--primary] hover:bg-blue-500 hover:border-blue-500">
+              Novo registro
+            </button>
+          </div>
+
+          <div class="flex flex-col justify-between items-start bg-[--tertiary] rounded-xl w-full self-stretch overflow-hidden">
+            <div class="flex justify-start items-center bg-[--primary] py-2 px-3 rounded-t-xl w-full">
+              <h3 class="text-xl text-green-600">Entradas</h3>
+              <span class="material-symbols-outlined px-2 text-green-600 text-xl">trending_up</span>
+            </div>
+            <strong id="saldo-entradas" class="flex items-end gap-1 text-[--secondary] text-3xl font-medium mt-5 px-3"><span class="text-2xl">R$</span> 900,00</strong>
+            <button id="botao-novo" class="flex justify-start items-center gap-5 p-1 px-3 my-5 !mx-3 text-base text-start text-[--secondary] bg-[--primary] border-primary rounded-lg hover:text-[--primary] hover:bg-blue-500 hover:border-blue-500">
+              Novo registro
+            </button>
+          </div>
+
+          <div class="flex flex-col justify-between items-start bg-[--tertiary] rounded-xl w-full self-stretch overflow-hidden">
+            <div class="flex justify-start items-center bg-[--primary] py-2 px-3 rounded-t-xl w-full">
+              <h3 class="text-xl text-red-600">Saídas</h3>
+              <span class="material-symbols-outlined px-2 text-red-600 text-xl">trending_down</span>
+            </div>
+            <strong id="saldo-entradas" class="flex items-end gap-1 text-[--secondary] text-3xl font-medium mt-5 px-3"><span class="text-2xl">R$</span> 0,00</strong>
+            <button id="botao-novo" class="flex justify-start items-center gap-5 p-1 px-3 my-5 !mx-3 text-base text-start text-[--secondary] bg-[--primary] border-primary rounded-lg hover:text-[--primary] hover:bg-blue-500 hover:border-blue-500">
+              Novo registro
+            </button>
+          </div>
+
+          <div class="flex flex-col justify-between items-start bg-[--tertiary] rounded-xl w-full self-stretch overflow-hidden">
+            <div class="flex justify-start items-center bg-[--primary] py-2 px-3 rounded-t-xl w-full">
+              <h3 class="text-xl text-yellow-500">Reservas</h3>
+              <span class="material-symbols-outlined px-2 text-yellow-500 text-xl">savings</span>
+            </div>
+            <strong id="saldo-entradas" class="flex items-end gap-1 text-[--secondary] text-3xl font-medium mt-5 px-3"><span class="text-2xl">R$</span> 1000,00</strong>
+            <button id="botao-novo" class="flex justify-start items-center gap-5 p-1 px-3 my-5 !mx-3 text-base text-start text-[--secondary] bg-[--primary] border-primary rounded-lg hover:text-[--primary] hover:bg-blue-500 hover:border-blue-500">
+              Novo registro
+            </button>
+          </div>
+
+        </div>
+
+        <div class="grid grid-cols-2 w-full gap-5">
+          <div class="flex flex-col items-center bg-[--tertiary] w-full rounded-xl self-start h-80">
+            <div class="flex justify-start items-center bg-[--primary] py-2 px-3 rounded-t-xl w-full">
+              <h3 class="text-xl text-blue-500">Relatórios</h3>
+              <span class="material-symbols-outlined px-2 text-blue-500 text-xl">monitoring</span>
+            </div>
+  
+            <div id="grafico" class="flex justify-center items-center hover:bg-green-500 !delay-0 rounded-full w-56 h-56 mt-6 cursor-pointer">
+              <div class="flex justify-center items-center bg-[--tertiary] rounded-full w-52 h-52 cursor-pointer">
+                <div class="flex justify-center items-center bg-green-600 rounded-full w-48 h-48 cursor-pointer">
+                  <div class="flex flex-col justify-center items-center bg-[--tertiary] rounded-full w-36 h-36 text-base cursor-pointer">
+                    <p class="cursor-pointer">Entradas</p>
+                    <p class="font-semibold cursor-pointer">R$ 900,00</p>
+                    <p class="cursor-pointer">100.00%</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+  
+          <div class="flex flex-col items-center bg-[--tertiary] w-full rounded-xl self-start h-80">
+            <div class="flex justify-start items-center bg-[--primary] py-2 px-3 rounded-t-xl w-full">
+              <div class="flex justify-start items-center bg-[--primary] rounded-t-xl w-full">
+                <h3 class="text-xl text-blue-500">Contas</h3>
+                <span class="material-symbols-outlined px-2 text-blue-500 text-xl">account_balance</span>
+              </div>
+              <strong id="saldo-total-contas" class="flex justify-center items-end gap-1 text-xl font-semibold"><span class="text-base font-semibold">R$</span> 900,00</strong>
+            </div>
+            <div class="flex justify-between items-center w-full p-3 hover:bg-[--bg] cursor-pointer">
+              <div class="flex justify-center items-center gap-3">
+                <span class="material-symbols-outlined bg-[--primary] rounded-full p-2 cursor-pointer">account_balance_wallet</span>
+                <p class="cursor-pointer">Carteira</p>
+              </div>
+              <strong id="saldo-total-contas" class="flex justify-center items-end gap-1 text-xl font-semibold cursor-pointer"><span class="text-base font-semibold cursor-pointer">R$</span> 900,00</strong>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!--
+      ████████ ██████   █████  ███    ██ 
+         ██    ██   ██ ██   ██ ████   ██ 
+         ██    ██████  ███████ ██ ██  ██ 
+         ██    ██   ██ ██   ██ ██  ██ ██ 
+         ██    ██   ██ ██   ██ ██   ████ 
+      -->
+
+      <section id="transacoes" class="section hidden">
+        <h2>Transações</h2>
+        <div class="card transacoes-container">
+          <div class="transacoes-filtros">
+            <div class="transacoes-filtros-meses">
+              <span class="material-symbols-outlined">chevron_left</span>
+              <h4>Junho | 2024</h4>
+              <span class="material-symbols-outlined">chevron_right</span>
+            </div>
+            <div class="transacoes-filtros-geral">
+              <div class="transacoes-filtros-geral-left">
+                <span class="material-symbols-outlined">search</span>
+                <input type="text" placeholder="Pesquisar...">
+              </div>
+              <div class="transacoes-filtros-geral-right">
+                <span class="material-symbols-outlined">filter_list</span>
+                <h4>Filtrar</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="divisoria"></div>
+          
+          <div class="transacoes-tabela">
+            <table>
+              <thead>
+                <tr>
+                  <th>Descrição</th>
+                  <th>Conta</th>
+                  <th>Valor</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="td-flex">Ajuste de saldo</td>
+                  <td>Carteira</td>
+                  <td class="saldo-positivo">+1000,00</td>
+                </tr>
+                <tr>
+                  <td class="td-flex">Compras do Mês</td>
+                  <td>Carteira</td>
+                  <td class="saldo-negativo">-100,00</td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+        </div>
+
+        <div class="card card-total">
+          <div class="card-total-container">
+            <p>Saldo Total</p>
+            <strong id="saldo-total"><span>R$</span> 900,00</strong>
+          </div>
+          <span class="material-symbols-outlined">attach_money</span>
+        </div>
+
+      </section>
+
+
+    </main>
+  </div>
+
+    <!--
+  ███████  ██████ ██████  ██ ██████  ████████ 
+  ██      ██      ██   ██ ██ ██   ██    ██    
+  ███████ ██      ██████  ██ ██████     ██    
+       ██ ██      ██   ██ ██ ██         ██    
+  ███████  ██████ ██   ██ ██ ██         ██   
+  -->
+
+  <script src="../src/js/alterarTema.js"></script>
+  <script src="../src/js/sidebar.js"></script>
+
+  <!--ANIMAÇÕES-->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>  <script> AOS.init({ duration: 1000 }); </script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <!--ANIMAÇÕES-->
+  
+  <noscript>
+    <div class="noscript">
+      <h1>Habilite o JavaScript!</h1>
+    </div>
+  </noscript>
+
+</body>
+
+</html>

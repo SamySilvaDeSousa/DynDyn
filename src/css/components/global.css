@@ -1,0 +1,25 @@
+.ativo {
+  background-color: #3B82F6 !important;
+  color: var(--primary) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+}
+.border-primary {
+  border: 2px solid var(--secondary);
+}
+.border-secondary {
+  border: 2px solid var(--primary);
+}
+
+#logo {
+  font-family: "Zen Dots", sans-serif;
+}
+.checkbox {
+
+  &:checked + label .circulo {
+    transform: translateX(29px);
+  }
+}
+
+#menu a.ativo span {
+  color: var(--primary) !important;
+}
