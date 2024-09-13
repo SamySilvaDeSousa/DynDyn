@@ -10,7 +10,7 @@
   <meta name="keywords" content="">
   <meta property="og:image" content="">
   <title>DynDyn</title>
-  <link rel="icon" href="./assets/files/images/global/favicon.svg" type="image/x-icon"> <!--FAVICON-->
+  <link rel="icon" href="/src/assets/images/favicon.png" type="image/x-icon"> <!--FAVICON-->
 
   <link rel="stylesheet" href="./src/css/main.css"> <!--CSS-->
   <script src="https://cdn.tailwindcss.com"></script> <!--TAILWIND CDN-->
@@ -39,10 +39,10 @@
     <header id="sidebar" class="relative flex flex-col justify-between items-start gap-5 bg-[--tertiary] w-[300px]">
       <div id="sidebar-top" class="flex flex-col justify-center items-center w-full">
         <h1 id="logo" class="text-blue-500 text-4xl mx-auto border-b-2 border-[--bg] py-5 w-full text-center font-primary">DynDyn</h1>
-        <button id="botao-novo" class="flex justify-start items-center gap-5 w-[90%] p-3 my-5 text-lg text-start cursor-pointer text-[--secondary] bg-[--primary] border-primary hover:border-blue-500 rounded-lg hover:text-[--primary] hover:bg-blue-500">
+        <button id="botao-novo" class="flex justify-start items-center gap-5 w-[90%] p-3 my-3 text-lg text-start cursor-pointer text-[--secondary] bg-[--primary] border-primary hover:border-blue-500 rounded-lg hover:text-[--primary] hover:bg-blue-500">
           <span class="material-symbols-outlined text-2xl cursor-pointer">add</span>Novo
         </button>
-        <nav id="menu" class="flex flex-col list-none border-t-2 border-[--bg] pt-5 w-full">
+        <nav id="menu" class="flex flex-col list-none border-t-2 border-[--bg] pt-3 w-full">
           <a href="painel.html" id="nav-dashboard" class="nav-link flex justify-start items-center gap-5 bg-[--tertiary] p-3 pl-7 text-lg hover:bg-[--primary] cursor-pointer">
             <span class="material-symbols-outlined text-2xl cursor-pointer">home</span> Painel
           </a>
@@ -66,16 +66,16 @@
   
     <main id="main" class="relative flex flex-col justify-center items-center list-none w-full bg-[--bg] pr-5 overflow-hidden transition-all h-screen">
 
-      <div class="flex justify-between items-center text-start w-full py-5"">
+      <div class="flex justify-between items-center text-start w-full py-4">
         <div id="titulo">
-          <h2 class="flex justify-start items-end gap-2 text-xl font-medium"><span class="material-symbols-outlined text-[--secondary] text-2xl">segment</span> Transações</h2>
+          <h2 class="flex justify-start items-center gap-2 text-xl font-medium"><span class="material-symbols-outlined text-[--secondary] text-2xl">segment</span> Transações</h2>
         </div>
         <div class="flex gap-5">
-          <div id="ajuda" class="flex justify-center items-center gap-3 bg-[--tertiary] hover:bg-[--primary] rounded-lg cursor-pointer">
-            <span class="material-symbols-outlined text-5xl cursor-pointer">help</span>
+          <div id="ajuda" class="flex justify-center items-center gap-3 bg-[--primary] hover:bg-blue-500 rounded-lg cursor-pointer border-2 border-[--secondary] hover:border-blue-500 group">
+            <span class="material-symbols-outlined text-4xl px-1.5 py-1 cursor-pointer group-hover:text-white">question_mark</span>
           </div>
-          <div id="perfil" class="flex justify-center items-center gap-3 bg-[--tertiary] hover:bg-[--primary] rounded-lg cursor-pointer">
-            <span class="material-symbols-outlined text-5xl cursor-pointer">account_circle</span>
+          <div id="perfil" class="flex justify-center items-center gap-3 bg-[--primary] hover:bg-blue-500 rounded-lg cursor-pointer border-2 border-[--secondary] hover:border-blue-500 group">
+            <span class="material-symbols-outlined text-[2.5rem] p-1 cursor-pointer group-hover:text-white">person</span>
           </div>
         </div>
       </div>
@@ -91,25 +91,27 @@
       <section id="transacoes" class="section flex justify-start items-start gap-5 w-full h-full mb-5 overflow-y-auto overflow-x-hidden">
 
         <div id="transacoes-container" class="flex flex-col items-start bg-[--tertiary] w-3/4 rounded-lg self-start h-full overflow-y-auto">
-          <div class="flex flex-col justify-start items-center gap-5 bg-[--primary] p-3 rounded-t-lg w-full">
+          <div class="flex flex-col justify-start items-center gap-5 bg-[--tertiary] p-3 rounded-t-lg w-full">
             <div class="flex justify-center items-center gap-5 w-full">
-              <span class="material-symbols-outlined text-4xl py-1 px-1.5 hover:bg-[--tertiary] rounded-full cursor-pointer">chevron_left</span>
+              <span class="material-symbols-outlined text-4xl py-1 px-1.5 hover:bg-[--primary] rounded-full cursor-pointer">chevron_left</span>
               <button class="bg-[--primary] p-3 border-primary rounded-lg font-medium hover:bg-blue-500 hover:text-[--primary] hover:border-blue-500">Agosto | 2024</button>
-              <span class="material-symbols-outlined text-4xl py-1 px-1.5 hover:bg-[--tertiary] rounded-full cursor-pointer">chevron_right</span>
+              <span class="material-symbols-outlined text-4xl py-1 px-1.5 hover:bg-[--primary] rounded-full cursor-pointer">chevron_right</span>
             </div>
             <div class="flex justify-center items-center w-full">
               <div class="flex justify-center items-center w-full group">
-                <label for="pesquisa"><span class="material-symbols-outlined bg-[--tertiary] p-3 rounded-lg rounded-r-none cursor-pointer group-hover:bg-[--bg]">search</span></label>
-                <input id="pesquisa" type="text" placeholder="Pesquisar..." class="bg-[--tertiary] p-3 cursor-text w-full focus:bg-[--bg] group-hover:bg-[--bg] outline-none">
+                <label for="pesquisa"><span class="material-symbols-outlined bg-[--bg] p-3 rounded-lg rounded-r-none cursor-pointer group-hover:bg-[--primary]">search</span></label>
+                <input id="pesquisa" type="text" placeholder="Pesquisar..." class="bg-[--bg] p-3 cursor-text w-full focus:bg-[--primary] group-hover:bg-[--primary] outline-none">
               </div>
               <div>
-                <button class="flex justify-center items-center gap-2 bg-[--tertiary] hover:bg-[--bg] p-3 rounded-lg rounded-l-none">
+                <button class="flex justify-center items-center gap-2 bg-[--bg] hover:bg-[--primary] p-3 rounded-lg rounded-l-none">
                   <span class="material-symbols-outlined cursor-pointer">filter_list</span>
                   Filtrar
                 </button>
               </div>
             </div>
           </div>
+
+          <div id="divisoria" class="w-full h-[2px] bg-[--bg] mb-3"></div>
 
           <table id="tabela-container" class="flex flex-col justify-start h-full w-full">
             <tr class="flex justify-between items-center w-full bg-[--primary] p-3">
@@ -126,7 +128,7 @@
           
         </div>
 
-        <div id="dashboard-container" class="flex !flex-col justify-start items-center gap-5 w-1/4 h-full">
+        <div id="transacoes-container" class="flex !flex-col justify-start items-center gap-5 w-1/4 h-full">
 
           <div class="flex flex-col justify-between items-start bg-[--tertiary] rounded-lg w-full min-h-44 self-stretch overflow-hidden">
             <div class="flex justify-start items-center bg-[--primary] py-2 px-3 rounded-t-lg w-full">
@@ -134,7 +136,7 @@
               <span class="material-symbols-outlined px-2 text-blue-500 text-xl">paid</span>
             </div>
             <div class="flex flex-col justify-around items-start h-full w-full">
-              <strong id="saldo-entradas" class="flex items-end gap-1 text-blue-500 text-3xl font-medium px-3 mt-2"><span class="text-2xl">R$</span> 3.500,00</strong>
+              <strong id="saldo-entradas" class="flex items-end gap-1 text-blue-500 text-3xl font-medium px-3 mt-2"><span class="text-2xl">R$</span> 4.600,00</strong>
               <button id="botao-novo" class="flex justify-start items-center gap-5 p-1 px-3 !mx-3 text-base text-start text-[--secondary] bg-[--primary] border-primary rounded-lg hover:text-[--primary] hover:bg-blue-500 hover:border-blue-500">
                 Ver relatórios
               </button>
@@ -147,7 +149,7 @@
               <span class="material-symbols-outlined px-2 text-green-600 text-xl">trending_up</span>
             </div>
             <div class="flex flex-col justify-around items-start h-full w-full">
-              <strong id="saldo-entradas" class="flex items-end gap-1 text-green-600 text-3xl font-medium px-3 mt-2"><span class="text-2xl">R$</span> 3.500,00</strong>
+              <strong id="saldo-entradas" class="flex items-end gap-1 text-green-600 text-3xl font-medium px-3 mt-2"><span class="text-2xl">R$</span> 4.600,00</strong>
               <button id="botao-novo" class="flex justify-start items-center gap-5 p-1 px-3 !mx-3 text-base text-start text-[--secondary] bg-[--primary] border-primary rounded-lg hover:text-[--primary] hover:bg-blue-500 hover:border-blue-500">
                 Novo registro
               </button>
@@ -161,19 +163,6 @@
             </div>
             <div class="flex flex-col justify-around items-start h-full w-full">
               <strong id="saldo-entradas" class="flex items-end gap-1 text-red-600 text-3xl font-medium px-3 mt-2"><span class="text-2xl">R$</span> 0,00</strong>
-              <button id="botao-novo" class="flex justify-start items-center gap-5 p-1 px-3 !mx-3 text-base text-start text-[--secondary] bg-[--primary] border-primary rounded-lg hover:text-[--primary] hover:bg-blue-500 hover:border-blue-500">
-                Novo registro
-              </button>
-            </div>
-          </div>
-
-          <div class="flex flex-col justify-between items-start bg-[--tertiary] rounded-lg w-full min-h-44 self-stretch overflow-hidden">
-            <div class="flex justify-start items-center bg-[--primary] py-2 px-3 rounded-t-lg w-full">
-              <h3 class="text-xl text-yellow-500">Reservas</h3>
-              <span class="material-symbols-outlined px-2 text-yellow-500 text-xl">savings</span>
-            </div>
-            <div class="flex flex-col justify-around items-start h-full w-full">
-              <strong id="saldo-entradas" class="flex items-end gap-1 text-yellow-500 text-3xl font-medium px-3 mt-2"><span class="text-2xl">R$</span> 1.200,00</strong>
               <button id="botao-novo" class="flex justify-start items-center gap-5 p-1 px-3 !mx-3 text-base text-start text-[--secondary] bg-[--primary] border-primary rounded-lg hover:text-[--primary] hover:bg-blue-500 hover:border-blue-500">
                 Novo registro
               </button>
