@@ -4,7 +4,7 @@
 
 .ativo {
   background-color: #3B82F6 !important;
-  color: var(--primary) !important;
+  color: white !important;
 }
 .border-primary {
   border: 2px solid var(--secondary);
@@ -24,10 +24,16 @@
   color: var(--primary) !important;
 }
 
-#transacoes-container::-webkit-scrollbar-track {
+#transacoes-container::-webkit-scrollbar-track,
+#contas::-webkit-scrollbar-track {
   margin: 0;
   background-color: transparent;
 }
-#transacoes-container::-webkit-scrollbar-thumb {
+#transacoes-container::-webkit-scrollbar-thumb,
+#contas::-webkit-scrollbar-thumb {
   border: 3px solid var(--tertiary);
+}
+
+input::placeholder {
+  color: var(--secondary) !important; /* Cor laranja como exemplo */
 }

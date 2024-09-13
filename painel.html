@@ -43,10 +43,10 @@
           <span class="material-symbols-outlined text-2xl cursor-pointer">add</span>Novo
         </button>
         <nav id="menu" class="flex flex-col list-none border-t-2 border-[--bg] pt-5 w-full">
-          <a href="painel.html" id="nav-dashboard" class="nav-link flex justify-start items-center gap-5 bg-[--tertiary] p-3 pl-7 text-lg hover:bg-[--primary] cursor-pointer">
-            <span class="material-symbols-outlined text-2xl cursor-pointer">home</span> Painel
+          <a id="nav-dashboard" class="nav-link ativo flex justify-start items-center gap-5 !text-white bg-[--tertiary] p-3 pl-7 text-lg hover:bg-[--bg] cursor-pointer">
+            <span class="material-symbols-outlined !text-white text-2xl cursor-pointer">home</span> Painel
           </a>
-          <a id="nav-transacoes" class="nav-link ativo flex justify-start items-center gap-5 text-[--secondary] bg-[--tertiary] hover:bg-[--primary] p-3 pl-7 text-lg cursor-pointer group">
+          <a href="transacoes.html" id="nav-transacoes" class="nav-link flex justify-start items-center gap-5 text-[--secondary] bg-[--tertiary] hover:bg-[--primary] p-3 pl-7 text-lg cursor-pointer group">
             <span class="material-symbols-outlined text-[--secondary] text-2xl cursor-pointer">segment</span> Transações
           </a>
           <a id="nav-relatorios" class="nav-link flex justify-start items-center gap-5 text-[--secondary] bg-[--tertiary] hover:bg-[--primary] p-3 pl-7 text-lg cursor-pointer group">
@@ -68,7 +68,7 @@
 
       <div class="flex justify-between items-center text-start w-full py-5"">
         <div id="titulo">
-          <h2 class="flex justify-start items-end gap-2 text-xl font-medium"><span class="material-symbols-outlined text-[--secondary] text-2xl">segment</span> Transações</h2>
+          <h2 class="flex justify-start items-end gap-2 text-xl font-medium"><span class="material-symbols-outlined text-[--secondary] text-2xl">home</span> Painel</h2>
         </div>
         <div class="flex gap-5">
           <div id="ajuda" class="flex justify-center items-center gap-3 bg-[--tertiary] hover:bg-[--primary] rounded-lg cursor-pointer">
@@ -88,45 +88,8 @@
       ██████  ██   ██ ███████ ██   ██ 
       -->
 
-      <section id="transacoes" class="section flex justify-start items-start gap-5 w-full h-full mb-5 overflow-y-auto overflow-x-hidden">
-
-        <div id="transacoes-container" class="flex flex-col items-start bg-[--tertiary] w-3/4 rounded-lg self-start h-full overflow-y-auto">
-          <div class="flex flex-col justify-start items-center gap-5 bg-[--primary] p-3 rounded-t-lg w-full">
-            <div class="flex justify-center items-center gap-5 w-full">
-              <span class="material-symbols-outlined text-4xl py-1 px-1.5 hover:bg-[--tertiary] rounded-full cursor-pointer">chevron_left</span>
-              <button class="bg-[--primary] p-3 border-primary rounded-lg font-medium hover:bg-blue-500 hover:text-[--primary] hover:border-blue-500">Agosto | 2024</button>
-              <span class="material-symbols-outlined text-4xl py-1 px-1.5 hover:bg-[--tertiary] rounded-full cursor-pointer">chevron_right</span>
-            </div>
-            <div class="flex justify-center items-center w-full">
-              <div class="flex justify-center items-center w-full group">
-                <label for="pesquisa"><span class="material-symbols-outlined bg-[--tertiary] p-3 rounded-lg rounded-r-none cursor-pointer group-hover:bg-[--bg]">search</span></label>
-                <input id="pesquisa" type="text" placeholder="Pesquisar..." class="bg-[--tertiary] p-3 cursor-text w-full focus:bg-[--bg] group-hover:bg-[--bg] outline-none">
-              </div>
-              <div>
-                <button class="flex justify-center items-center gap-2 bg-[--tertiary] hover:bg-[--bg] p-3 rounded-lg rounded-l-none">
-                  <span class="material-symbols-outlined cursor-pointer">filter_list</span>
-                  Filtrar
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <table id="tabela-container" class="flex flex-col justify-start h-full w-full">
-            <tr class="flex justify-between items-center w-full bg-[--primary] p-3">
-              <th>Título</th>
-              <th>Teste</th>
-              <th></th>
-            </tr>
-            <tr>
-              <td>Salário</td>
-              <td></td>
-              <td></td>
-            </tr>
-          </table>
-          
-        </div>
-
-        <div id="dashboard-container" class="flex !flex-col justify-start items-center gap-5 w-1/4 h-full">
+      <section id="dashboard" class="section flex flex-col justify-start items-center gap-5 w-full h-full overflow-y-auto overflow-x-hidden">
+        <div id="dashboard-container" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 justify-center items-center gap-5 w-full">
 
           <div class="flex flex-col justify-between items-start bg-[--tertiary] rounded-lg w-full min-h-44 self-stretch overflow-hidden">
             <div class="flex justify-start items-center bg-[--primary] py-2 px-3 rounded-t-lg w-full">
@@ -181,6 +144,116 @@
           </div>
 
         </div>
+
+        <div class="grid grid-cols-2 w-full gap-5">
+          <div class="flex flex-col items-center bg-[--tertiary] w-full rounded-lg self-start h-80">
+            <div class="flex justify-start items-center bg-[--primary] py-2 px-3 rounded-t-lg w-full">
+              <h3 class="text-xl">Relatórios</h3>
+              <span class="material-symbols-outlined px-2 text-xl">monitoring</span>
+            </div>
+  
+            <div id="grafico" class="flex justify-center items-center hover:bg-green-500 !delay-0 rounded-full w-56 h-56 mt-7 cursor-pointer">
+              <div class="flex justify-center items-center bg-[--tertiary] rounded-full w-52 h-52 cursor-pointer">
+                <div class="flex justify-center items-center bg-green-600 rounded-full w-48 h-48 cursor-pointer">
+                  <div class="flex flex-col justify-center items-center bg-[--tertiary] rounded-full w-36 h-36 text-base cursor-pointer">
+                    <p class="cursor-pointer">Entradas</p>
+                    <p class="font-semibold cursor-pointer">R$ 3.500,00</p>
+                    <p class="cursor-pointer">100.00%</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+  
+          <div class="flex flex-col items-start bg-[--tertiary] w-full rounded-lg self-start h-80">
+            <div class="flex justify-start items-center bg-[--primary] py-2 px-3 rounded-t-lg w-full">
+              <div class="flex justify-start items-center bg-[--primary] rounded-t-lg w-full">
+                <h3 class="text-xl">Contas</h3>
+                <span class="material-symbols-outlined px-2 text-xl">account_balance</span>
+              </div>
+              <strong id="saldo-total-contas" class="flex justify-center items-end gap-1 text-xl font-normal"><span class="text-base font-normal">R$</span> 3.500,00</strong>
+            </div>
+            <div id="contas" class="w-full overflow-auto mb-3">
+              <div class="flex justify-between items-center w-full p-3 hover:bg-[--primary] cursor-pointer group">
+                <div class="flex justify-center items-center gap-3 cursor-pointer">
+                  <span class="material-symbols-outlined bg-[--primary] rounded-full p-2 cursor-pointer group-hover:bg-[--tertiary]">account_balance_wallet</span>
+                  <p class="cursor-pointer text-lg">Carteira</p>
+                </div>
+                <strong id="saldo-total-contas" class="flex justify-center items-end gap-1 text-xl font-normal cursor-pointer"><span class="text-base font-normal cursor-pointer">R$</span> 3.500,00</strong>
+              </div>
+            </div>
+            <button id="botao-novo" class="flex justify-start items-center gap-5 mt-auto p-1 px-3 mb-3 !mx-3 text-base text-start text-[--secondary] bg-[--primary] border-primary rounded-lg hover:text-[--primary] hover:bg-blue-500 hover:border-blue-500">
+              Gerenciar contas
+            </button>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-start bg-[--tertiary] w-full rounded-lg self-start h-full mb-5 overflow-y-auto">
+          <div class="flex justify-start items-center bg-[--primary] py-2 px-3 rounded-t-lg w-full">
+            <h3 class="text-xl">Últimas Transações</h3>
+            <span class="material-symbols-outlined px-2 text-xl">segment</span>
+          </div>
+
+          <div id="transacoes-container" class="!overflow-y-auto h-full w-full">
+            <div class="flex justify-between items-center w-full px-3 py-2">
+              <div class="flex justify-center items-center gap-3">
+                <span class="material-symbols-outlined bg-[--primary] rounded-full p-2">account_balance_wallet</span>
+                <p class="text-lg">Salário</p>
+              </div>
+              <div class="flex flex-col justify-center items-end">
+                <p class="text-sm">10/08/2024</p>
+                <strong id="saldo-total-contas" class="flex justify-center items-end gap-1 text-xl font-normal text-green-600"><span class="text-base font-normal">R$</span> 2.900,00</strong>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center w-full px-3 py-2 border-b-2 border-[--bg]">
+              <div class="flex justify-center items-center gap-3">
+                <span class="material-symbols-outlined bg-[--primary] rounded-full p-2">account_balance_wallet</span>
+                <p class="text-lg">Freela 4</p>
+              </div>
+              <div class="flex flex-col justify-center items-end">
+                <p class="text-sm">10/08/2024</p>
+                <strong id="saldo-total-contas" class="flex justify-center items-end gap-1 text-xl font-normal text-green-600"><span class="text-base font-normal">R$</span> 125,00</strong>
+              </div>
+            </div>
+  
+            <div class="flex justify-between items-center w-full px-3 py-2">
+              <div class="flex justify-center items-center gap-3">
+                <span class="material-symbols-outlined bg-[--primary] rounded-full p-2">account_balance_wallet</span>
+                <p class="text-lg">Freela 3</p>
+              </div>
+              <div class="flex flex-col justify-center items-end">
+                <p class="text-sm">08/08/2024</p>
+                <strong id="saldo-total-contas" class="flex justify-center items-end gap-1 text-xl font-normal text-green-600"><span class="text-base font-normal">R$</span> 125,00</strong>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center w-full px-3 py-2 border-b-2 border-[--bg]">
+              <div class="flex justify-center items-center gap-3">
+                <span class="material-symbols-outlined bg-[--primary] rounded-full p-2">account_balance_wallet</span>
+                <p class="text-lg">Freela 2</p>
+              </div>
+              <div class="flex flex-col justify-center items-end">
+                <p class="text-sm">08/08/2024</p>
+                <strong id="saldo-total-contas" class="flex justify-center items-end gap-1 text-xl font-normal text-green-600"><span class="text-base font-normal">R$</span> 125,00</strong>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center w-full px-3 py-2">
+              <div class="flex justify-center items-center gap-3">
+                <span class="material-symbols-outlined bg-[--primary] rounded-full p-2">account_balance_wallet</span>
+                <p class="text-lg">Freela 1</p>
+              </div>
+              <div class="flex flex-col justify-center items-end">
+                <p class="text-sm">07/08/2024</p>
+                <strong id="saldo-total-contas" class="flex justify-center items-end gap-1 text-xl font-normal text-green-600"><span class="text-base font-normal">R$</span> 125,00</strong>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
 
       </section>
 
