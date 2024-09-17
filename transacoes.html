@@ -55,6 +55,9 @@
           <a href="contas.html" id="nav-contas" class="nav-link flex justify-start items-center gap-5 text-[--secondary] bg-[--tertiary] hover:bg-[--primary] p-3 pl-7 text-lg cursor-pointer group">
             <span class="material-symbols-outlined text-[--secondary] text-2xl cursor-pointer">account_balance</span> Contas
           </a>
+          <a href="calculadoras.html" id="nav-contas" class="nav-link flex justify-start items-center gap-5 text-[--secondary] bg-[--tertiary] hover:bg-[--primary] p-3 pl-7 text-lg cursor-pointer group">
+            <span class="material-symbols-outlined text-[--secondary] text-2xl cursor-pointer">calculate</span> Calculadoras
+          </a>
         </nav>
       </div>
       <div id="sidebar-bottom" class="w-full">
@@ -85,7 +88,7 @@
 
       <section id="transacoes" class="section flex justify-start items-start gap-5 w-full h-full mb-5 overflow-y-auto overflow-x-hidden">
 
-        <div id="transacoes-container" class="flex flex-col items-start bg-[--tertiary] w-3/4 rounded-lg self-start h-full overflow-y-auto">
+        <div id="transacoes-container" class="flex flex-col items-start bg-[--tertiary] w-3/4 rounded-lg self-start h-max overflow-y-auto">
           <div class="flex flex-col justify-start items-center gap-5 bg-[--tertiary] p-3 rounded-t-lg w-full">
             <div class="flex justify-center items-center gap-5 w-full">
               <span class="material-symbols-outlined text-4xl py-1 px-1.5 hover:bg-[--primary] rounded-full cursor-pointer">chevron_left</span>
@@ -108,19 +111,77 @@
 
           <div id="divisoria" class="w-full h-[2px] bg-[--bg] mb-3"></div>
 
-          <table id="tabela-container" class="flex flex-col justify-start h-full w-full">
-            <tr class="flex justify-between items-center w-full bg-[--primary] p-3">
-              <th></th>
-              <th></th>
-              <th></th>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
+          <table class="w-full border-collapse overflow-x-auto">
+            <thead class="bg-[--primary]">
+              <tr>
+                <th class="text-left p-3"></th>
+                <th class="flex items-center text-left p-3 cursor-pointer group">Título <span class="material-symbols-outlined text-[--primary] group-hover:text-[--secondary] cursor-pointer">arrow_drop_down</span></th>
+                <th class="text-left p-3">Categoria</th>
+                <th class="text-left p-3">Conta</th>
+                <th class="text-left p-3">Data</th>
+                <th class="text-left p-3">Valor</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="hover:bg-[--primary] group">
+                <td class="text-left p-3 cursor-pointer"></td>
+                <td class="text-left p-3 cursor-pointer">Dinheiro Reserva</td>
+                <td class="text-left p-3 cursor-pointer"><span class="material-symbols-outlined bg-[--primary] group-hover:bg-[--tertiary] rounded-full p-2 mr-3 cursor-pointer">savings</span>Teste</td>
+                <td class="text-left p-3 cursor-pointer"><span class="material-symbols-outlined bg-[--primary] group-hover:bg-[--tertiary] rounded-full p-2 mr-3 cursor-pointer">savings</span>Cofrinho</td>
+                <td class="text-left p-3 cursor-pointer">10/08/2024</td>
+                <td class="text-left text-lg p-3 text-green-600 cursor-pointer">R$ 1.200,00</td>
+              </tr>
+              <tr class="hover:bg-[--primary] group">
+                <td class="text-left p-3 cursor-pointer"></td>
+                <td class="text-left p-3 cursor-pointer">Salário</td>
+                <td class="text-left p-3 cursor-pointer"><span class="material-symbols-outlined bg-[--primary] group-hover:bg-[--tertiary] rounded-full p-2 mr-3 cursor-pointer">work</span>Trabalho</td>
+                <td class="text-left p-3 cursor-pointer"><span class="text-lg text-white font-medium bg-purple-600 rounded-full p-[0.450rem] px-[0.400rem] cursor-pointer mr-3">NU</span>Nubank</td>
+                <td class="text-left p-3 cursor-pointer">10/08/2024</td>
+                <td class="text-left text-lg p-3 text-green-600 cursor-pointer">R$ 2.900,00</td>
+              </tr>
+              <tr class="hover:bg-[--primary] group">
+                <td class="text-left p-3 cursor-pointer"></td>
+                <td class="text-left p-3 cursor-pointer">Freela 4</td>
+                <td class="text-left p-3 cursor-pointer"><span class="material-symbols-outlined bg-[--primary] group-hover:bg-[--tertiary] rounded-full p-2 mr-3 cursor-pointer">work</span>Renda Extra</td>
+                <td class="text-left p-3 cursor-pointer"><span class="material-symbols-outlined bg-[--primary] group-hover:bg-[--tertiary] rounded-full p-2 mr-3 cursor-pointer">account_balance_wallet</span>Carteira</td>
+                <td class="text-left p-3 cursor-pointer">10/08/2024</td>
+                <td class="text-left text-lg p-3 text-green-600 cursor-pointer">R$ 125,00</td>
+              </tr>
+              <tr class="bg-[--secondary] text-[--primary] group">
+                <td class="text-left p-3 rounded-l-full"></td>
+                <td class="text-left p-3"></td>
+                <td class="text-left p-3">Saldo total de hoje:</td>
+                <td class="text-left p-3"></td>
+                <td class="text-left text-lg p-3 text-[--primary]">R$ 4.225,00</td>
+                <td class="text-left p-3 rounded-r-full"></td>
+              </tr>
+              <tr class="hover:bg-[--primary] group">
+                <td class="text-left p-3 cursor-pointer"></td>
+                <td class="text-left p-3 cursor-pointer">Freela 3</td>
+                <td class="text-left p-3 cursor-pointer"><span class="material-symbols-outlined bg-[--primary] group-hover:bg-[--tertiary] rounded-full p-2 mr-3 cursor-pointer">work</span>Renda Extra</td>
+                <td class="text-left p-3 cursor-pointer"><span class="material-symbols-outlined bg-[--primary] group-hover:bg-[--tertiary] rounded-full p-2 mr-3 cursor-pointer">account_balance_wallet</span>Carteira</td>
+                <td class="text-left p-3 cursor-pointer">08/08/2024</td>
+                <td class="text-left text-lg p-3 text-green-600 cursor-pointer">R$ 125,00</td>
+              </tr>
+              <tr class="hover:bg-[--primary] group border-b-2 border-[--bg]">
+                <td class="text-left p-3 cursor-pointer"></td>
+                <td class="text-left p-3 cursor-pointer">Freela 2</td>
+                <td class="text-left p-3 cursor-pointer"><span class="material-symbols-outlined bg-[--primary] group-hover:bg-[--tertiary] rounded-full p-2 mr-3 cursor-pointer">work</span>Renda Extra</td>
+                <td class="text-left p-3 cursor-pointer"><span class="material-symbols-outlined bg-[--primary] group-hover:bg-[--tertiary] rounded-full p-2 mr-3 cursor-pointer">account_balance_wallet</span>Carteira</td>
+                <td class="text-left p-3 cursor-pointer">08/08/2024</td>
+                <td class="text-left text-lg p-3 text-green-600 cursor-pointer">R$ 125,00</td>
+              </tr>
+              <tr class="hover:bg-[--primary] group">
+                <td class="text-left p-3 cursor-pointer"></td>  
+                <td class="text-left p-3 cursor-pointer">Freela 1</td>
+                <td class="text-left p-3 cursor-pointer"><span class="material-symbols-outlined bg-[--primary] group-hover:bg-[--tertiary] rounded-full p-2 mr-3 cursor-pointer">work</span>Renda Extra</td>
+                <td class="text-left p-3 cursor-pointer"><span class="material-symbols-outlined bg-[--primary] group-hover:bg-[--tertiary] rounded-full p-2 mr-3 cursor-pointer">account_balance_wallet</span>Carteira</td>
+                <td class="text-left p-3 cursor-pointer">07/08/2024</td>
+                <td class="text-left text-lg p-3 text-green-600 cursor-pointer">R$ 125,00</td>
+              </tr>
+            </tbody>
           </table>
-          
+        
         </div>
 
         <div id="transacoes-container" class="flex !flex-col justify-start items-center gap-5 w-1/4 h-full">

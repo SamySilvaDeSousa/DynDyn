@@ -51,8 +51,8 @@
           <span class="material-symbols-outlined text-2xl cursor-pointer">add</span>Novo registro
         </button>
         <nav id="menu" class="flex flex-col list-none border-t-2 border-[--bg] pt-3 w-full">
-          <a id="nav-dashboard" class="nav-link ativo flex justify-start items-center gap-5 !text-white bg-[--tertiary] p-3 pl-7 text-lg hover:bg-[--bg] cursor-pointer">
-            <span class="material-symbols-outlined !text-white text-2xl cursor-pointer">home</span> Painel
+          <a href="painel.html" id="nav-dashboard" class="nav-link flex justify-start items-center gap-5 bg-[--tertiary] p-3 pl-7 text-lg hover:bg-[--bg] cursor-pointer">
+            <span class="material-symbols-outlined text-2xl cursor-pointer">home</span> Painel
           </a>
           <a href="transacoes.html" id="nav-transacoes" class="nav-link flex justify-start items-center gap-5 text-[--secondary] bg-[--tertiary] hover:bg-[--primary] p-3 pl-7 text-lg cursor-pointer group">
             <span class="material-symbols-outlined text-[--secondary] text-2xl cursor-pointer">segment</span> Transações
@@ -63,7 +63,7 @@
           <a href="contas.html" id="nav-contas" class="nav-link flex justify-start items-center gap-5 text-[--secondary] bg-[--tertiary] hover:bg-[--primary] p-3 pl-7 text-lg cursor-pointer group">
             <span class="material-symbols-outlined text-[--secondary] text-2xl cursor-pointer">account_balance</span> Contas
           </a>
-          <a href="calculadoras.html" id="nav-contas" class="nav-link flex justify-start items-center gap-5 text-[--secondary] bg-[--tertiary] hover:bg-[--primary] p-3 pl-7 text-lg cursor-pointer group">
+          <a id="nav-contas" class="nav-link ativo flex justify-start items-center gap-5 text-[--secondary] bg-[--tertiary] hover:bg-[--primary] p-3 pl-7 text-lg cursor-pointer group">
             <span class="material-symbols-outlined text-[--secondary] text-2xl cursor-pointer">calculate</span> Calculadoras
           </a>
         </nav>
@@ -103,7 +103,7 @@
               <span class="material-symbols-outlined px-2 text-blue-500 text-xl">paid</span>
             </div>
             <div class="flex flex-col justify-around items-start h-full w-full">
-              <strong id="saldo-entradas" class="flex items-end gap-1 text-blue-500 text-3xl font-medium px-3 mt-2"><span class="text-2xl">R$</span> 5.000,00</strong>
+              <strong id="saldo-entradas" class="flex items-end gap-1 text-blue-500 text-3xl font-medium px-3 mt-2"><span class="text-2xl">R$</span> 4.600,00</strong>
               <a href="transacoes.html" id="botao-novo" class="flex justify-start items-center gap-5 p-1 px-3 !mx-3 text-base text-start text-[--secondary] bg-[--primary] border-primary rounded-lg hover:text-[--primary] hover:bg-blue-500 hover:border-blue-500 cursor-pointer">
                 Ver transações
               </a>
@@ -116,7 +116,7 @@
               <span class="material-symbols-outlined px-2 text-green-600 text-xl">trending_up</span>
             </div>
             <div class="flex flex-col justify-around items-start h-full w-full">
-              <strong id="saldo-entradas" class="flex items-end gap-1 text-green-600 text-3xl font-medium px-3 mt-2"><span class="text-2xl">R$</span> 7.500,00</strong>
+              <strong id="saldo-entradas" class="flex items-end gap-1 text-green-600 text-3xl font-medium px-3 mt-2"><span class="text-2xl">R$</span> 4.600,00</strong>
               <button id="botao-novo" class="flex justify-start items-center gap-5 p-1 px-3 !mx-3 text-base text-start text-[--secondary] bg-[--primary] border-primary rounded-lg hover:text-[--primary] hover:bg-green-600 hover:border-green-600">
                 Novo registro
               </button>
@@ -129,7 +129,7 @@
               <span class="material-symbols-outlined px-2 text-red-600 text-xl">trending_down</span>
             </div>
             <div class="flex flex-col justify-around items-start h-full w-full">
-              <strong id="saldo-entradas" class="flex items-end gap-1 text-red-600 text-3xl font-medium px-3 mt-2"><span class="text-2xl">R$</span> 2.500,00</strong>
+              <strong id="saldo-entradas" class="flex items-end gap-1 text-red-600 text-3xl font-medium px-3 mt-2"><span class="text-2xl">R$</span> 0,00</strong>
               <button id="botao-novo" class="flex justify-start items-center gap-5 p-1 px-3 !mx-3 text-base text-start text-[--secondary] bg-[--primary] border-primary rounded-lg hover:text-[--primary] hover:bg-red-600 hover:border-red-600">
                 Novo registro
               </button>
@@ -145,25 +145,16 @@
               <span class="material-symbols-outlined px-2 text-xl">monitoring</span>
             </div>
   
-            <div id="grafico" class="flex flex-col justify-center items-center w-full h-full mb-10">
-              <div class="flex justify-center items-end gap-5">
-                <div class="flex justify-start items-end bg-red-600 hover:bg-red-400 w-20 h-14 rounded-lg relative">
-                  <div class="flex items-center h-full w-2 bg-red-500 rounded-full absolute right-[5.25rem]"></div>
-                  <p class="-translate-x-10 text-red-600 text-xl translate-y-10 ml-7">Saídas</p>
-                </div>
-                <div class="flex justify-start items-end bg-green-600 hover:bg-green-500 w-20 h-40 rounded-lg relative">
-                  <div class="flex items-center h-full w-2 bg-green-500 rounded-full absolute left-[5.25rem]"></div>
-                  <p class="pl-5 text-green-600 text-xl translate-y-10 -ml-5">Entradas</p>
+            <div id="grafico" class="flex justify-center items-center hover:bg-green-500 !delay-0 rounded-full w-56 h-56 mt-7 cursor-pointer">
+              <div class="flex justify-center items-center bg-[--tertiary] rounded-full w-52 h-52 cursor-pointer">
+                <div class="flex justify-center items-center bg-green-600 rounded-full w-48 h-48 cursor-pointer">
+                  <div class="flex flex-col justify-center items-center bg-[--tertiary] rounded-full w-36 h-36 text-base cursor-pointer">
+                    <p class="cursor-pointer">Entradas</p>
+                    <p class="font-semibold cursor-pointer">R$ 4.600,00</p>
+                    <p class="cursor-pointer">100.00%</p>
+                  </div>
                 </div>
               </div>
-              <!--
-              <div class="flex flex-col justify-evenly items-center h-full text-xl">
-                <div class="flex justify-between w-full gap-80"><p class="text-green-600">Entradas</p> <p class="text-green-600">R$ 4.600,00</p></div>
-                <div class="flex justify-between w-full"><p class="text-red-600">Saídas</p> <p class="text-red-600">R$ 0,00</p></div>
-                <div class="bg-[--bg] w-full h-[2px]"></div>
-                <div class="flex justify-between w-full"><p class="text-blue-600">Total</p> <p class="text-blue-600">R$ 4.600,00</p></div>
-              </div>
-              -->
             </div>
             <a href="relatorios.html" id="botao-novo" class="absolute bottom-3 left-0 justify-start items-center gap-5 p-1 px-3 !mx-3 text-base text-start text-[--secondary] bg-[--primary] border-primary rounded-lg hover:text-[--primary] hover:bg-black cursor-pointer">
               Ver relatórios
@@ -176,7 +167,7 @@
                 <h3 class="text-xl">Contas</h3>
                 <span class="material-symbols-outlined px-2 text-xl">account_balance</span>
               </div>
-              <strong id="saldo-total-contas" class="flex justify-center items-end gap-1 text-xl font-normal"><span class="text-base font-normal">R$</span> 5.000,00</strong>
+              <strong id="saldo-total-contas" class="flex justify-center items-end gap-1 text-xl font-normal"><span class="text-base font-normal">R$</span> 4.600,00</strong>
             </div>
             <div id="contas" class="w-full overflow-auto mb-3">
               <div class="flex justify-between items-center w-full p-3 hover:bg-[--primary] cursor-pointer group">
@@ -191,14 +182,14 @@
                   <span class="material-symbols-outlined bg-[--primary] group-hover:bg-[--tertiary] rounded-full p-2">savings</span>
                   <p class="cursor-pointer text-lg">Cofrinho</p>
                 </div>
-                <strong id="saldo-total-contas" class="flex justify-center items-end gap-1 text-xl font-normal cursor-pointer"><span class="text-base font-normal cursor-pointer">R$</span> 2.000,00</strong>
+                <strong id="saldo-total-contas" class="flex justify-center items-end gap-1 text-xl font-normal cursor-pointer"><span class="text-base font-normal cursor-pointer">R$</span> 1.200,00</strong>
               </div>
               <div class="flex justify-between items-center w-full p-3 hover:bg-[--primary] cursor-pointer">
                 <div class="flex justify-center items-center gap-3 cursor-pointer">
                   <span class="text-lg text-white font-medium bg-purple-600 rounded-full p-[0.450rem] px-2 cursor-pointer">NU</span>
                   <p class="cursor-pointer text-lg">Nubank</p>
                 </div>
-                <strong id="saldo-total-contas" class="flex justify-center items-end gap-1 text-xl font-normal cursor-pointer"><span class="text-base font-normal cursor-pointer">R$</span> 2.500,00</strong>
+                <strong id="saldo-total-contas" class="flex justify-center items-end gap-1 text-xl font-normal cursor-pointer"><span class="text-base font-normal cursor-pointer">R$</span> 2.900,00</strong>
               </div>
             </div>
             <a href="contas.html" id="botao-novo" class="flex justify-start items-center gap-5 mt-auto p-1 px-3 mb-3 !mx-3 text-base text-start text-[--secondary] bg-[--primary] border-primary rounded-lg hover:text-[--primary] hover:bg-black hover:border-black cursor-pointer">
