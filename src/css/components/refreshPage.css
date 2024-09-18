@@ -2,7 +2,7 @@
   position: absolute;
   top: 0;
   width: 200%;
-  height: 99vh;
+  height: 100vh;
   background-color: var(--primary);
   z-index: 100;
   animation: refreshPage 0.5s ease-in-out forwards;

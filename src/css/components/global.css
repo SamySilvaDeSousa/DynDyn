@@ -3,37 +3,30 @@
 }
 
 .ativo {
-  background-color: black !important;
+  background-color: var(--theme) !important;
   color: white !important;
-}
-.border-primary {
-  border: 2px solid var(--secondary);
-}
-.border-secondary {
-  border: 2px solid var(--primary);
-}
-
-.checkbox {
-
-  &:checked + label .circulo {
-    transform: translateX(29px);
-  }
 }
 
 #menu a.ativo span {
   color: var(--primary) !important;
 }
 
+#transacoes::-webkit-scrollbar-track,
+#dashboard::-webkit-scrollbar-track,
 #transacoes-container::-webkit-scrollbar-track,
 #contas::-webkit-scrollbar-track {
   margin: 0;
   background-color: transparent;
 }
-#transacoes-container::-webkit-scrollbar-thumb,
-#contas::-webkit-scrollbar-thumb {
+#transacoes-container::-webkit-scrollbar-thumb {
   border: 3px solid var(--tertiary);
+}
+#contas::-webkit-scrollbar-thumb,
+#transacoes::-webkit-scrollbar-thumb,
+#dashboard::-webkit-scrollbar-thumb {
+  border: 3px solid var(--bg);
 }
 
 input::placeholder {
-  color: var(--secondary) !important; /* Cor laranja como exemplo */
+  color: var(--secondary) !important;
 }
