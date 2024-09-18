@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="keywords" content="">
   <meta property="og:image" content="">
-  <title>DynDyn</title>
+  <title>Lazuly</title>
   <link rel="icon" href="/src/assets/images/favicon.png" type="image/x-icon"> <!--FAVICON-->
 
   <link rel="stylesheet" href="./src/css/main.css"> <!--CSS-->
@@ -38,7 +38,10 @@
   <div id="body-container" class="flex gap-5">
     <header id="sidebar" class="relative flex flex-col justify-between items-start gap-5 bg-[--tertiary] w-[300px]">
       <div id="sidebar-top" class="flex flex-col justify-center items-center w-full">
-        <h1 id="logo" class="text-[--theme] text-4xl mx-auto border-b-2 border-[--bg] py-5 w-full text-center font-primary">DynDyn</h1>
+        <h1 id="logo" class="flex justify-center items-center gap-3 text-[--theme] text-4xl border-b-2 border-[--bg] py-5 w-full text-center font-primary">
+          <img src="src/assets/images/lazuly.png" alt="Logo" class="w-10">
+          Lazuly
+        </h1>
         <button id="botao-novo" class="flex justify-start items-center gap-5 w-[90%] p-3 my-3 text-lg text-start cursor-pointer text-[--secondary] bg-[--primary] hover:border-[--theme] rounded-xl hover:text-[--primary] hover:bg-[--theme]">
           <span class="material-symbols-outlined text-2xl cursor-pointer">add</span>Novo registro
         </button>
@@ -88,18 +91,7 @@
 
       <section id="transacoes" class="section flex flex-col justify-start items-start gap-5 w-full h-full mb-5 overflow-y-auto overflow-x-hidden">
 
-
-        <div class="flex justify-start items-center gap-5 w-full">
-          <button class="flex justify-center items-center gap-2 bg-[--tertiary] hover:bg-[--primary] p-3 rounded-xl">
-            <span class="material-symbols-outlined cursor-pointer">filter_list</span>
-            Filtrar por Conta
-          </button>
-          <button class="flex justify-center items-center gap-2 bg-[--tertiary] hover:bg-[--primary] p-3 rounded-xl">
-            <span class="material-symbols-outlined cursor-pointer">filter_list</span>
-            Filtrar por Categoria
-          </button>
-        </div>
-        <div id="transacoes-container" class="flex flex-col items-center bg-[--tertiary] w-full rounded-xl self-start h-max overflow-y-auto">
+        <div id="transacoes-container" class="flex flex-col items-center bg-[--tertiary] w-full rounded-xl self-start h-full overflow-y-auto">
           <div class="flex flex-col justify-start items-center gap-5 bg-[--tertiary] p-3 rounded-t-xl w-full">
             <div class="flex justify-center items-center gap-5 w-full">
               <span class="material-symbols-outlined text-3xl py-0.5 px-1.5 hover:bg-[--primary] rounded-full cursor-pointer">chevron_left</span>
@@ -107,9 +99,14 @@
               <span class="material-symbols-outlined text-3xl py-0.5 px-1.5 hover:bg-[--primary] rounded-full cursor-pointer">chevron_right</span>
             </div>
           </div>
+          <button class="flex justify-center items-center gap-2 bg-[--bg] hover:bg-[--primary] p-3 mb-3 rounded-xl">
+            <span class="material-symbols-outlined cursor-pointer">filter_list</span>
+            Filtrar
+          </button>
 
           <div id="divisoria" class="w-full h-[2px] bg-[--bg]"></div>
 
+          <!--
           <div id="grafico" class="flex justify-center items-center hover:bg-green-500 !delay-0 rounded-full w-56 h-56 my-7 cursor-pointer">
             <div class="flex justify-center items-center bg-[--tertiary] rounded-full w-52 h-52 cursor-pointer">
               <div class="flex justify-center items-center bg-green-600 rounded-full w-48 h-48 cursor-pointer">
@@ -121,7 +118,30 @@
               </div>
             </div>
           </div>
-          
+          -->
+
+          <div id="grafico" class="flex justify-evenly items-center w-full h-max my-10">
+            <div class="flex justify-center items-end gap-5">
+              <div class="flex justify-start items-end bg-[--red] hover:bg-[#ff5d5d] w-20 h-14 rounded-xl relative group">
+                <div class="flex items-center h-[70%] self-center w-2 bg-[--red] rounded-full absolute right-[5.25rem]"></div>
+                <p class="-translate-x-7 text-[--red] text-xl translate-y-10 ml-7">Saídas</p>
+                <span class="pl-5 text-transparent group-hover:text-[--red] text-xl -translate-x-64 self-center"><span class="mr-1 text-base">R$</span>2.500,00</span>
+              </div>
+              <div class="flex justify-start items-end bg-[--green] hover:bg-green-500 w-20 h-40 rounded-xl relative group">
+                <div class="flex items-center h-[90%] self-center w-2 bg-[--green] rounded-full absolute left-[5.25rem]"></div>
+                <p class="pl-5 text-[--green] text-xl translate-y-10 -ml-5">Entradas</p>
+                <span class="pl-5 text-transparent group-hover:text-[--green] text-xl self-center ml-1"><span class="mr-1 text-base">R$</span>7.500,00</span>
+              </div>
+            </div>
+            <div class="flex flex-col justify-evenly items-center gap-3 h-full text-xl">
+              <h2 class="text-2xl">Entradas X Saídas</h2>
+              <div class="flex justify-between w-full gap-80"><p class="text-[--green]">Entradas</p> <p class="text-[--green]">R$ 7.500,00</p></div>
+              <div class="flex justify-between w-full"><p class="text-[--red]">Saídas</p> <p class="text-[--red]">R$ 2.500,00</p></div>
+              <div class="bg-[--bg] w-full h-[2px]"></div>
+              <div class="flex justify-between w-full"><p class="text-[--theme]">Total</p> <p class="text-[--theme]">R$ 5.000,00</p></div>
+            </div>
+          </div>
+
         </div>
 
       </section>
