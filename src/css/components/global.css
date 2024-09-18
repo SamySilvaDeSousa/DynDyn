@@ -6,6 +6,7 @@
 .ativo {
   background-color: var(--theme) !important;
   color: white !important;
+  cursor: default !important;
 }
 
 #menu a.ativo span {

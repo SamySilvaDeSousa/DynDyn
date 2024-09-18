@@ -40,7 +40,7 @@
       <div id="sidebar-top" class="flex flex-col justify-center items-center w-full">
         <h1 id="logo" class="flex justify-center items-center gap-3 text-[--theme] text-4xl border-b-2 border-[--bg] py-5 w-full text-center font-primary">
           <img src="src/assets/images/lazuly.png" alt="Logo" class="w-10">
-          Lazuly
+          <p class="font-primary">L<span class="font-primary text-cyan-400">azul</span>y</p>
         </h1>
         <button id="botao-novo" class="flex justify-start items-center gap-5 w-[90%] p-3 my-3 text-lg text-start cursor-pointer text-[--secondary] bg-[--primary] hover:border-[--theme] rounded-xl hover:text-[--primary] hover:bg-[--theme]">
           <span class="material-symbols-outlined text-2xl cursor-pointer">add</span>Novo registro
@@ -64,21 +64,27 @@
         </nav>
       </div>
       <div id="sidebar-bottom" class="w-full">
-        <button id="trocar-tema" class="flex justify-start items-center gap-5 text-[--secondary] bg-[--tertiary] border-none p-3 pl-7 text-lg w-full hover:bg-[--primary]">
-          <span class="material-symbols-outlined text-[--secondary] text-3xl cursor-pointer">help</span> Como usar
+        <button id="trocar-tema" class="flex justify-start items-center gap-5 text-[--secondary] bg-[--tertiary] border-none p-3 pl-7 text-lg w-full hover:bg-[--shadow]">
+          <span class="material-symbols-outlined text-[--secondary] text-2xl cursor-pointer">help</span> Como usar
         </button>
       </div>
     </header>
   
     <main id="main" class="relative flex flex-col justify-center items-center list-none w-full bg-[--bg] pr-5 overflow-hidden transition-all h-screen">
 
-      <div class="flex justify-between items-center text-start w-full py-3.5">
+      <div class="flex justify-between items-center text-start w-full py-3.5 relative">
         <div id="titulo">
           <h2 class="flex justify-start items-center gap-2 text-xl font-medium"><span class="material-symbols-outlined text-[--secondary] text-2xl">monitoring</span> Relatórios</h2>
         </div>
         <div id="perfil" class="flex justify-center items-center hover:bg-[--tertiary] gap-3 text-lg px-3 py-2 rounded-xl cursor-pointer group">
           <span class="material-symbols-outlined text-3xl !text-black cursor-pointer px-1 pb-[0.100rem] mr-1 bg-[--primary] rounded-full">person</span> Seu Nome <span class="material-symbols-outlined cursor-pointer">keyboard_arrow_down</span>
         </div>
+
+        <div id="popup-perfil" class="hidden absolute top-[5.1rem] right-0 w-[206px] bg-[--tertiary] rounded-xl shadow-xl z-10">
+          <p class="flex justify-start items-center gap-3 text-lg px-3 py-2 hover:bg-[--primary] rounded-t-xl cursor-pointer"><span class="material-symbols-outlined text-xl cursor-pointer">account_circle</span>Meu perfil</p>
+          <p class="flex justify-start items-center gap-3 text-lg px-3 py-2 hover:bg-[--primary] cursor-pointer"><span class="material-symbols-outlined text-xl cursor-pointer">settings</span>Configurações</p>
+          <p class="flex justify-start items-center gap-3 text-lg text-[--red] px-3 py-2 hover:bg-[--red] hover:text-white rounded-b-xl cursor-pointer group"><span class="material-symbols-outlined text-[--red] group-hover:text-white text-xl cursor-pointer">logout</span>Sair</p>
+        </div> 
       </div>
 
       <!--
@@ -91,7 +97,7 @@
 
       <section id="transacoes" class="section flex flex-col justify-start items-start gap-5 w-full h-full mb-5 overflow-y-auto overflow-x-hidden">
 
-        <div id="transacoes-container" class="flex flex-col items-center bg-[--tertiary] w-full rounded-xl self-start h-full overflow-y-auto">
+        <div id="transacoes-container" class="flex flex-col items-center bg-[--tertiary] w-full rounded-xl self-start h-max pb-8 overflow-y-auto">
           <div class="flex flex-col justify-start items-center gap-5 bg-[--tertiary] p-3 rounded-t-xl w-full">
             <div class="flex justify-center items-center gap-5 w-full">
               <span class="material-symbols-outlined text-3xl py-0.5 px-1.5 hover:bg-[--primary] rounded-full cursor-pointer">chevron_left</span>
