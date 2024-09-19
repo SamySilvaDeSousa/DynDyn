@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="keywords" content="">
   <meta property="og:image" content="">
-  <title>Lazuly</title>
+  <title>DynDyn - Painel</title>
   <link rel="icon" href="/src/assets/images/favicon.png" type="image/x-icon"> <!--FAVICON-->
 
   <link rel="stylesheet" href="./src/css/main.css"> <!--CSS-->
@@ -27,13 +27,11 @@
 
   <div id="refresh-animation"></div>
 
-  <!--
-  <div id="popup-novo_registro" class="absolute top-[3.75rem] left-64 bg-[--tertiary] rounded-xl shadow-xl z-10">
-    <p class="flex justify-start items-center text-lg text-[--green] px-3 py-2 hover:bg-[--green] hover:text-white rounded-t-xl cursor-pointer group">Entrada<span class="material-symbols-outlined px-2 text-[--green] group-hover:text-white text-xl cursor-pointer">trending_up</span></p>
-    <p class="flex justify-start items-center text-lg text-[--red] px-3 py-2 hover:bg-[--red] hover:text-white cursor-pointer group">Saída<span class="material-symbols-outlined px-2 text-[--red] group-hover:text-white text-xl cursor-pointer">trending_down</span></p>
-    <p class="flex justify-start items-center text-lg text-[--theme] px-3 py-2 hover:bg-[--theme] hover:text-white rounded-b-xl cursor-pointer group">Transferência<span class="material-symbols-outlined px-2 text-[--theme] group-hover:text-white text-xl cursor-pointer">compare_arrows</span></p>
-  </div> 
-  -->
+  <div id="popup-novo_registro" class=" absolute top-[3.2rem] left-[16.7rem] bg-[--primary] rounded-xl shadow-lg z-10">
+    <p class="flex justify-start items-center text-lg text-[--green] px-3 py-2 hover:bg-[--green] hover:text-white rounded-t-xl cursor-pointer group"><span class="material-symbols-outlined px-1 mr-3 text-[--green] text-2xl bg-green-200 group-hover:bg-white rounded-full cursor-pointer">trending_up</span>Entrada</p>
+    <p class="flex justify-start items-center text-lg text-[--red] px-3 py-2 hover:bg-[--red] hover:text-white cursor-pointer group"><span class="material-symbols-outlined px-1 mr-3 text-[--red] text-2xl bg-red-200 group-hover:bg-white rounded-full cursor-pointer">trending_down</span>Saída</p>
+    <p class="flex justify-start items-center text-lg text-[--theme] px-3 py-2 hover:bg-[--theme] hover:text-white rounded-b-xl cursor-pointer group"><span class="material-symbols-outlined px-1 mr-3 text-[--theme] text-2xl bg-sky-200 group-hover:bg-white rounded-full cursor-pointer">compare_arrows</span>Transferência</p>
+  </div>
 
   <!--
   ██   ██ ███████  █████  ██████  ███████ ██████  
@@ -47,8 +45,7 @@
     <header id="sidebar" class="relative flex flex-col justify-between items-start gap-5 bg-[--tertiary] w-[300px]">
       <div id="sidebar-top" class="flex flex-col justify-center items-center w-full max-h-[680px]">
         <h1 id="logo" class="flex justify-center items-center gap-3 text-[--theme] text-4xl border-b-2 border-[--bg] py-5 w-full text-center font-primary">
-          <img src="src/assets/images/lazuly.png" alt="Logo" class="w-10">
-          <p class="font-primary">L<span class="font-primary text-cyan-400">azul</span>y</p>
+          DynDyn
         </h1>
         <button id="botao-novo" class="flex justify-start items-center gap-5 w-[90%] p-3 my-3 text-lg text-start cursor-pointer text-[--secondary] bg-[--primary] hover:border-[--theme] rounded-xl hover:text-[--primary] hover:bg-[--theme]">
           <span class="material-symbols-outlined text-2xl cursor-pointer">add</span>Novo registro
@@ -88,10 +85,10 @@
           <span class="material-symbols-outlined text-3xl !text-black cursor-pointer px-1 pb-[0.100rem] mr-1 bg-[--primary] rounded-full">person</span> Seu Nome <span class="material-symbols-outlined cursor-pointer">keyboard_arrow_down</span>
         </div>
 
-        <div id="popup-perfil" class="hidden absolute top-[5.1rem] right-0 w-[206px] bg-[--tertiary] rounded-xl shadow-xl z-10">
-          <p class="flex justify-start items-center gap-3 text-lg px-3 py-2 hover:bg-[--primary] rounded-t-xl cursor-pointer"><span class="material-symbols-outlined text-xl cursor-pointer">account_circle</span>Meu perfil</p>
-          <p class="flex justify-start items-center gap-3 text-lg px-3 py-2 hover:bg-[--primary] cursor-pointer"><span class="material-symbols-outlined text-xl cursor-pointer">settings</span>Configurações</p>
-          <p class="flex justify-start items-center gap-3 text-lg text-[--red] px-3 py-2 hover:bg-[--red] hover:text-white rounded-b-xl cursor-pointer group"><span class="material-symbols-outlined text-[--red] group-hover:text-white text-xl cursor-pointer">logout</span>Sair</p>
+        <div id="popup-perfil" class="absolute top-20 right-0 w-[206px] bg-[--primary] rounded-xl shadow-lg z-10">
+          <p class="flex justify-start items-center gap-3 text-lg px-3 py-2 hover:text-white hover:bg-[--theme] rounded-t-xl cursor-pointer"><span class="material-symbols-outlined text-2xl cursor-pointer">account_circle</span>Meu perfil</p>
+          <p class="flex justify-start items-center gap-3 text-lg px-3 py-2 hover:text-white hover:bg-[--theme] cursor-pointer"><span class="material-symbols-outlined text-2xl cursor-pointer">settings</span>Configurações</p>
+          <p class="flex justify-start items-center gap-3 text-lg text-[--red] px-3 py-2 hover:bg-[--red] hover:text-white rounded-b-xl cursor-pointer group"><span class="material-symbols-outlined text-[--red] group-hover:text-white text-2xl cursor-pointer">logout</span>Sair</p>
         </div> 
       </div>
 
@@ -108,8 +105,8 @@
 
           <div class="flex flex-col justify-between items-start bg-[--tertiary] rounded-xl w-full min-h-44 self-stretch overflow-hidden">
             <div class="flex justify-start items-center bg-[--primary] py-2 px-3 rounded-t-xl w-full">
+              <span class="material-symbols-outlined px-1 mr-3 text-[--theme] text-2xl bg-sky-200 rounded-full">attach_money</span>
               <h3 class="text-xl text-[--theme]">Total</h3>
-              <span class="material-symbols-outlined px-2 text-[--theme] text-xl">paid</span>
             </div>
             <div class="flex flex-col justify-around items-start h-full w-full">
               <strong id="saldo-entradas" class="flex items-end gap-1 text-[--theme] text-3xl font-medium px-3 mt-2"><span class="text-2xl">R$</span> 5.000,00</strong>
@@ -121,8 +118,8 @@
 
           <div class="flex flex-col justify-between items-start bg-[--tertiary] rounded-xl w-full min-h-44 self-stretch overflow-hidden">
             <div class="flex justify-start items-center bg-[--primary] py-2 px-3 rounded-t-xl w-full">
+              <span class="material-symbols-outlined px-1 mr-3 text-[--green] text-2xl bg-green-200 rounded-full">trending_up</span>
               <h3 class="text-xl text-[--green]">Entradas</h3>
-              <span class="material-symbols-outlined px-2 text-[--green] text-xl">trending_up</span>
             </div>
             <div class="flex flex-col justify-around items-start h-full w-full">
               <strong id="saldo-entradas" class="flex items-end gap-1 text-[--green] text-3xl font-medium px-3 mt-2"><span class="text-2xl">R$</span> 7.500,00</strong>
@@ -134,8 +131,8 @@
 
           <div class="flex flex-col justify-between items-start bg-[--tertiary] rounded-xl w-full min-h-44 self-stretch overflow-hidden">
             <div class="flex justify-start items-center bg-[--primary] py-2 px-3 rounded-t-xl w-full">
+              <span class="material-symbols-outlined px-1 mr-3 text-[--red] text-2xl bg-red-200 rounded-full">trending_down</span>
               <h3 class="text-xl text-[--red]">Saídas</h3>
-              <span class="material-symbols-outlined px-2 text-[--red] text-xl">trending_down</span>
             </div>
             <div class="flex flex-col justify-around items-start h-full w-full">
               <strong id="saldo-entradas" class="flex items-end gap-1 text-[--red] text-3xl font-medium px-3 mt-2"><span class="text-2xl">R$</span> 2.500,00</strong>
@@ -150,8 +147,8 @@
         <div class="grid grid-cols-2 w-full gap-5">
           <div class="flex flex-col items-center bg-[--tertiary] w-full rounded-xl self-start h-80 relative">
             <div class="flex justify-start items-center bg-[--primary] py-2 px-3 rounded-t-xl w-full">
+              <span class="material-symbols-outlined px-1 mr-3 text-2xl bg-[--tertiary] rounded-full">monitoring</span>
               <h3 class="text-xl">Relatórios</h3>
-              <span class="material-symbols-outlined px-2 text-xl">monitoring</span>
             </div>
   
             <div id="grafico" class="flex flex-col justify-center items-center w-full h-full mb-10">
@@ -184,8 +181,8 @@
           <div class="flex flex-col items-start bg-[--tertiary] w-full rounded-xl self-start h-80">
             <div class="flex justify-start items-center bg-[--primary] py-2 px-3 rounded-t-xl w-full">
               <div class="flex justify-start items-center bg-[--primary] rounded-t-xl w-full">
+                <span class="material-symbols-outlined px-1 mr-3 text-2xl bg-[--tertiary] rounded-full">account_balance</span>
                 <h3 class="text-xl">Contas</h3>
-                <span class="material-symbols-outlined px-2 text-xl">account_balance</span>
               </div>
               <strong id="saldo-total-contas" class="flex justify-center items-end gap-1 text-xl font-normal"><span class="text-base font-normal">R$</span> 5.000,00</strong>
             </div>
@@ -220,8 +217,8 @@
 
         <div class="flex flex-col items-start bg-[--tertiary] w-full rounded-xl self-start h-96 mb-5 overflow-y-auto">
           <div class="flex justify-start items-center bg-[--primary] py-2 px-3 rounded-t-xl w-full">
+            <span class="material-symbols-outlined px-1 mr-3 text-2xl bg-[--tertiary] rounded-full">segment</span>
             <h3 class="text-xl">Últimas Transações</h3>
-            <span class="material-symbols-outlined px-2 text-xl">segment</span>
           </div>
 
           <div id="transacoes-container" class="!overflow-y-auto h-full w-full">

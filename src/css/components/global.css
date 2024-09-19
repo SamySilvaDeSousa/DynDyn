@@ -32,3 +32,29 @@
 input::placeholder {
   color: var(--secondary) !important;
 }
+
+#popup-perfil p:nth-child(1)::before {
+  content: '';
+  position: absolute;
+  bottom: 100%; /* Posiciona a ponta acima do balão */
+  left: 90px; /* Ajusta a posição horizontal da ponta */
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent var(--primary) transparent;
+}
+#popup-perfil p:nth-child(1):hover::before {
+  border-color: transparent transparent var(--primary) transparent !important;
+}
+
+#popup-novo_registro p:nth-child(2)::before {
+  content: '';
+  position: absolute;
+  top: 61px;
+  left: -20px; /* Posição da ponta à esquerda do balão */
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent var(--primary) transparent transparent;
+}
+#popup-novo_registro p:nth-child(2):hover::before {
+  border-color: transparent var(--red) transparent transparent !important;
+}
