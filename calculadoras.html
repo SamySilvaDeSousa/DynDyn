@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="keywords" content="">
   <meta property="og:image" content="">
-  <title>DynDyn</title>
+  <title>DynDyn - Painel</title>
   <link rel="icon" href="/src/assets/images/favicon.png" type="image/x-icon"> <!--FAVICON-->
 
   <link rel="stylesheet" href="./src/css/main.css"> <!--CSS-->
@@ -28,14 +28,6 @@
   <div id="refresh-animation"></div>
 
   <!--
-  <div id="popup-novo_registro" class="absolute top-[3.75rem] left-64 bg-[--tertiary] rounded-xl shadow-xl z-10">
-    <p class="flex justify-start items-center text-lg text-green-600 px-3 py-2 hover:bg-[--primary] rounded-t-lg cursor-pointer">Entrada<span class="material-symbols-outlined px-2 text-green-600 text-xl cursor-pointer">trending_up</span></p>
-    <p class="flex justify-start items-center text-lg text-red-600 px-3 py-2 hover:bg-[--primary] cursor-pointer">Saída<span class="material-symbols-outlined px-2 text-red-600 text-xl cursor-pointer">trending_down</span></p>
-    <p class="flex justify-start items-center text-lg text-blue-500 px-3 py-2 hover:bg-[--primary] rounded-b-lg cursor-pointer">Transferência<span class="material-symbols-outlined px-2 text-blue-500 text-xl cursor-pointer">compare_arrows</span></p>
-  </div> 
-  -->
-
-  <!--
   ██   ██ ███████  █████  ██████  ███████ ██████  
   ██   ██ ██      ██   ██ ██   ██ ██      ██   ██ 
   ███████ █████   ███████ ██   ██ █████   ██████  
@@ -45,45 +37,68 @@
 
   <div id="body-container" class="flex gap-5">
     <header id="sidebar" class="relative flex flex-col justify-between items-start gap-5 bg-[--tertiary] w-[300px]">
-      <div id="sidebar-top" class="flex flex-col justify-center items-center w-full">
-        <h1 id="logo" class="text-black text-4xl mx-auto border-b-2 border-[--bg] py-5 w-full text-center font-primary">DynDyn</h1>
-        <button id="botao-novo" class="flex justify-start items-center gap-5 w-[90%] p-3 my-3 text-lg text-start cursor-pointer text-[--secondary] bg-[--primary] hover:border-black rounded-lg hover:text-[--primary] hover:bg-black">
+      <div id="sidebar-top" class="flex flex-col justify-center items-center w-full max-h-[680px]">
+        <h1 id="logo" class="flex justify-center items-center gap-3 text-[--theme] text-4xl border-b-2 border-[--bg] py-5 w-full text-center font-primary">
+          DynDyn
+        </h1>
+        <button id="botao-novo_registro" class="flex justify-start items-center gap-5 w-[90%] p-3 my-3 text-lg text-start cursor-pointer text-[--secondary] bg-[--primary] hover:border-[--theme] rounded-xl hover:text-[--primary] hover:bg-[--theme]">
           <span class="material-symbols-outlined text-2xl cursor-pointer">add</span>Novo registro
         </button>
-        <nav id="menu" class="flex flex-col list-none border-t-2 border-[--bg] pt-3 w-full">
-          <a href="painel.html" id="nav-dashboard" class="nav-link flex justify-start items-center gap-5 bg-[--tertiary] p-3 pl-7 text-lg hover:bg-[--bg] cursor-pointer">
-            <span class="material-symbols-outlined text-2xl cursor-pointer">home</span> Painel
+        <nav id="menu" class="flex flex-col list-none border-t-2 border-[--bg] pt-3 w-full overflow-auto">
+          <a href="painel.html" id="nav-dashboard" class="nav-link flex justify-start items-center gap-5 text-[--secondary] bg-[--tertiary] hover:bg-[--shadow] p-3 pl-7 text-lg cursor-pointer group">
+            <span class="material-symbols-outlined text-[--secondary] text-2xl cursor-pointer">home</span> Painel
           </a>
-          <a href="transacoes.html" id="nav-transacoes" class="nav-link flex justify-start items-center gap-5 text-[--secondary] bg-[--tertiary] hover:bg-[--primary] p-3 pl-7 text-lg cursor-pointer group">
+          <a href="transacoes.html" id="nav-transacoes" class="nav-link flex justify-start items-center gap-5 text-[--secondary] bg-[--tertiary] hover:bg-[--shadow] p-3 pl-7 text-lg cursor-pointer group">
             <span class="material-symbols-outlined text-[--secondary] text-2xl cursor-pointer">segment</span> Transações
           </a>
-          <a href="relatorios.html" id="nav-relatorios" class="nav-link flex justify-start items-center gap-5 text-[--secondary] bg-[--tertiary] hover:bg-[--primary] p-3 pl-7 text-lg cursor-pointer group">
+          <a href="relatorios.html" id="nav-relatorios" class="nav-link flex justify-start items-center gap-5 text-[--secondary] bg-[--tertiary] hover:bg-[--shadow] p-3 pl-7 text-lg cursor-pointer group">
             <span class="material-symbols-outlined text-[--secondary] text-2xl cursor-pointer">monitoring</span> Relatórios
           </a>
-          <a href="contas.html" id="nav-contas" class="nav-link flex justify-start items-center gap-5 text-[--secondary] bg-[--tertiary] hover:bg-[--primary] p-3 pl-7 text-lg cursor-pointer group">
+          <a href="contas.html" id="nav-contas" class="nav-link flex justify-start items-center gap-5 text-[--secondary] bg-[--tertiary] hover:bg-[--shadow] p-3 pl-7 text-lg cursor-pointer group">
             <span class="material-symbols-outlined text-[--secondary] text-2xl cursor-pointer">account_balance</span> Contas
           </a>
-          <a id="nav-contas" class="nav-link ativo flex justify-start items-center gap-5 text-[--secondary] bg-[--tertiary] hover:bg-[--primary] p-3 pl-7 text-lg cursor-pointer group">
+          <a id="nav-contas" class="nav-link ativo flex justify-start items-center gap-5 text-[--secondary] bg-[--tertiary] hover:bg-[--shadow] p-3 pl-7 text-lg cursor-pointer group">
             <span class="material-symbols-outlined text-[--secondary] text-2xl cursor-pointer">calculate</span> Calculadoras
           </a>
         </nav>
       </div>
       <div id="sidebar-bottom" class="w-full">
-        <button id="trocar-tema" class="flex justify-start items-center gap-5 text-[--secondary] bg-[--tertiary] border-none p-3 pl-7 text-lg w-full hover:bg-[--primary]">
-          <span class="material-symbols-outlined text-[--secondary] text-3xl cursor-pointer">help</span> Como usar
+        <button id="trocar-tema" class="flex justify-start items-center gap-5 text-[--secondary] bg-[--tertiary] border-none p-3 pl-7 text-lg w-full hover:bg-[--shadow]">
+          <span class="material-symbols-outlined text-[--secondary] text-2xl cursor-pointer">help</span> Como usar
         </button>
+      </div>
+
+      <div id="popup-novo_registro" class="hidden absolute top-[3.2rem] -right-[12.7rem] bg-[--primary] rounded-xl shadow-lg z-10">
+        <p class="flex justify-start items-center text-lg text-[--green] px-3 py-2 hover:bg-[--green] hover:text-white rounded-t-xl cursor-pointer group">
+          <span class="material-symbols-outlined px-1 mr-3 text-[--green] text-2xl bg-green-200 group-hover:bg-white rounded-full cursor-pointer">trending_up</span>
+          Entrada
+        </p>
+        <p class="flex justify-start items-center text-lg text-[--red] px-3 py-2 hover:bg-[--red] hover:text-white cursor-pointer group">
+          <span class="material-symbols-outlined px-1 mr-3 text-[--red] text-2xl bg-red-200 group-hover:bg-white rounded-full cursor-pointer">trending_down</span>
+          Saída
+        </p>
+        <p class="flex justify-start items-center text-lg text-[--theme] px-3 py-2 hover:bg-[--theme] hover:text-white rounded-b-xl cursor-pointer group">
+          <span class="material-symbols-outlined px-1 mr-3 text-[--theme] text-2xl bg-sky-200 group-hover:bg-white rounded-full cursor-pointer">compare_arrows</span>
+          Transferência
+        </p>
       </div>
     </header>
   
     <main id="main" class="relative flex flex-col justify-center items-center list-none w-full bg-[--bg] pr-5 overflow-hidden transition-all h-screen">
 
-      <div class="flex justify-between items-center text-start w-full py-3.5">
+      <div class="flex justify-between items-center text-start w-full py-3.5 relative">
         <div id="titulo">
-          <h2 class="flex justify-start items-end gap-2 text-xl font-medium"><span class="material-symbols-outlined text-[--secondary] text-2xl">home</span> Painel</h2>
+          <h2 class="flex justify-start items-end gap-2 text-xl font-medium"><span class="material-symbols-outlined text-[--secondary] text-2xl">calculate</span> Calculadoras</h2>
         </div>
-        <div id="perfil" class="flex justify-center items-center hover:bg-[--tertiary] gap-3 text-lg px-3 py-2 rounded-lg cursor-pointer group">
-          <span class="material-symbols-outlined text-3xl cursor-pointer px-1 pb-[0.100rem] mr-1 bg-[--primary] rounded-full">person</span> Seu Nome <span class="material-symbols-outlined cursor-pointer">keyboard_arrow_down</span>
+        <div id="perfil" class="flex justify-center items-center hover:bg-[--tertiary] gap-3 text-lg px-3 py-2 rounded-xl cursor-pointer group">
+          <span class="material-symbols-outlined text-3xl !text-black cursor-pointer px-1 pb-[0.100rem] mr-1 bg-[--primary] rounded-full">person</span> Seu Nome <span id="perfil-span" class="material-symbols-outlined cursor-pointer">keyboard_arrow_down</span>
         </div>
+
+        <div id="popup-perfil" class="hidden absolute top-20 right-0 w-[206px] bg-[--primary] rounded-xl shadow-lg z-10">
+          <p class="flex justify-start items-center gap-3 text-lg px-3 py-2 hover:bg-[--shadow] rounded-t-xl cursor-pointer"><span class="material-symbols-outlined text-2xl cursor-pointer">account_circle</span>Meu perfil</p>
+          <p class="flex justify-start items-center gap-3 text-lg px-3 py-2 hover:bg-[--shadow] cursor-pointer"><span class="material-symbols-outlined text-2xl cursor-pointer">settings</span>Configurações</p>
+          <p class="flex justify-start items-center gap-3 text-lg text-[--red] px-3 py-2 hover:bg-[--red] hover:text-white rounded-b-xl cursor-pointer group"><span class="material-symbols-outlined text-[--red] group-hover:text-white text-2xl cursor-pointer">logout</span>Sair</p>
+        </div> 
       </div>
 
       <!--
@@ -94,187 +109,22 @@
       ██████  ██   ██ ███████ ██   ██ 
       -->
 
-      <section id="dashboard" class="section flex flex-col justify-start items-center gap-5 w-full h-full overflow-y-auto overflow-x-hidden">
-        <div id="dashboard-container" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-center items-center gap-5 w-full">
+      <section id="calculadoras" class="section flex justify-center items-start gap-5 w-full h-full overflow-y-auto overflow-x-hidden pb-5">
+        <div id="calculadoras-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-center items-center gap-5 w-full">
 
-          <div class="flex flex-col justify-between items-start bg-[--tertiary] rounded-lg w-full min-h-44 self-stretch overflow-hidden">
-            <div class="flex justify-start items-center bg-[--primary] py-2 px-3 rounded-t-lg w-full">
-              <h3 class="text-xl text-blue-500">Total</h3>
-              <span class="material-symbols-outlined px-2 text-blue-500 text-xl">paid</span>
-            </div>
-            <div class="flex flex-col justify-around items-start h-full w-full">
-              <strong id="saldo-entradas" class="flex items-end gap-1 text-blue-500 text-3xl font-medium px-3 mt-2"><span class="text-2xl">R$</span> 4.600,00</strong>
-              <a href="transacoes.html" id="botao-novo" class="flex justify-start items-center gap-5 p-1 px-3 !mx-3 text-base text-start text-[--secondary] bg-[--primary] rounded-lg hover:text-[--primary] hover:bg-blue-500 hover:border-blue-500 cursor-pointer">
-                Ver transações
-              </a>
-            </div>
+          <!--CALCULADORAS-->
+
+          <div class="flex flex-col justify-evenly items-center bg-[--tertiary] hover:bg-[--primary] rounded-xl w-full min-h-44 p-3 self-stretch overflow-hidden cursor-pointer">
+            <span class="material-symbols-outlined text-[--theme] p-2 text-5xl bg-sky-200 rounded-full cursor-pointer">percent</span>
+            <p class="text-xl cursor-pointer">Juros simples</p>
           </div>
 
-          <div class="flex flex-col justify-between items-start bg-[--tertiary] rounded-lg w-full min-h-44 self-stretch overflow-hidden">
-            <div class="flex justify-start items-center bg-[--primary] py-2 px-3 rounded-t-lg w-full">
-              <h3 class="text-xl text-green-600">Entradas</h3>
-              <span class="material-symbols-outlined px-2 text-green-600 text-xl">trending_up</span>
-            </div>
-            <div class="flex flex-col justify-around items-start h-full w-full">
-              <strong id="saldo-entradas" class="flex items-end gap-1 text-green-600 text-3xl font-medium px-3 mt-2"><span class="text-2xl">R$</span> 4.600,00</strong>
-              <button id="botao-novo" class="flex justify-start items-center gap-5 p-1 px-3 !mx-3 text-base text-start text-[--secondary] bg-[--primary] rounded-lg hover:text-[--primary] hover:bg-green-600 hover:border-green-600">
-                Novo registro
-              </button>
-            </div>
-          </div>
-
-          <div class="flex flex-col justify-between items-start bg-[--tertiary] rounded-lg w-full min-h-44 self-stretch overflow-hidden">
-            <div class="flex justify-start items-center bg-[--primary] py-2 px-3 rounded-t-lg w-full">
-              <h3 class="text-xl text-red-600">Saídas</h3>
-              <span class="material-symbols-outlined px-2 text-red-600 text-xl">trending_down</span>
-            </div>
-            <div class="flex flex-col justify-around items-start h-full w-full">
-              <strong id="saldo-entradas" class="flex items-end gap-1 text-red-600 text-3xl font-medium px-3 mt-2"><span class="text-2xl">R$</span> 0,00</strong>
-              <button id="botao-novo" class="flex justify-start items-center gap-5 p-1 px-3 !mx-3 text-base text-start text-[--secondary] bg-[--primary] rounded-lg hover:text-[--primary] hover:bg-red-600 hover:border-red-600">
-                Novo registro
-              </button>
-            </div>
+          <div class="flex flex-col justify-evenly items-center bg-[--tertiary] hover:bg-[--primary] rounded-xl w-full min-h-44 p-3 self-stretch overflow-hidden cursor-pointer">
+            <span class="material-symbols-outlined text-[--theme] p-2 text-5xl bg-sky-200 rounded-full cursor-pointer">percent</span>
+            <p class="text-xl cursor-pointer">Juros compostos</p>
           </div>
 
         </div>
-
-        <div class="grid grid-cols-2 w-full gap-5">
-          <div class="flex flex-col items-center bg-[--tertiary] w-full rounded-lg self-start h-80 relative">
-            <div class="flex justify-start items-center bg-[--primary] py-2 px-3 rounded-t-lg w-full">
-              <h3 class="text-xl">Relatórios</h3>
-              <span class="material-symbols-outlined px-2 text-xl">monitoring</span>
-            </div>
-  
-            <div id="grafico" class="flex justify-center items-center hover:bg-green-500 !delay-0 rounded-full w-56 h-56 mt-7 cursor-pointer">
-              <div class="flex justify-center items-center bg-[--tertiary] rounded-full w-52 h-52 cursor-pointer">
-                <div class="flex justify-center items-center bg-green-600 rounded-full w-48 h-48 cursor-pointer">
-                  <div class="flex flex-col justify-center items-center bg-[--tertiary] rounded-full w-36 h-36 text-base cursor-pointer">
-                    <p class="cursor-pointer">Entradas</p>
-                    <p class="font-semibold cursor-pointer">R$ 4.600,00</p>
-                    <p class="cursor-pointer">100.00%</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <a href="relatorios.html" id="botao-novo" class="absolute bottom-3 left-0 justify-start items-center gap-5 p-1 px-3 !mx-3 text-base text-start text-[--secondary] bg-[--primary] rounded-lg hover:text-[--primary] hover:bg-black cursor-pointer">
-              Ver relatórios
-            </a>
-          </div>
-  
-          <div class="flex flex-col items-start bg-[--tertiary] w-full rounded-lg self-start h-80">
-            <div class="flex justify-start items-center bg-[--primary] py-2 px-3 rounded-t-lg w-full">
-              <div class="flex justify-start items-center bg-[--primary] rounded-t-lg w-full">
-                <h3 class="text-xl">Contas</h3>
-                <span class="material-symbols-outlined px-2 text-xl">account_balance</span>
-              </div>
-              <strong id="saldo-total-contas" class="flex justify-center items-end gap-1 text-xl font-normal"><span class="text-base font-normal">R$</span> 4.600,00</strong>
-            </div>
-            <div id="contas" class="w-full overflow-auto mb-3">
-              <div class="flex justify-between items-center w-full p-3 hover:bg-[--primary] cursor-pointer group">
-                <div class="flex justify-center items-center gap-3 cursor-pointer">
-                  <span class="material-symbols-outlined bg-[--primary] rounded-full p-2 cursor-pointer group-hover:bg-[--tertiary]">account_balance_wallet</span>
-                  <p class="cursor-pointer text-lg">Carteira</p>
-                </div>
-                <strong id="saldo-total-contas" class="flex justify-center items-end gap-1 text-xl font-normal cursor-pointer"><span class="text-base font-normal cursor-pointer">R$</span> 500,00</strong>
-              </div>
-              <div class="flex justify-between items-center w-full p-3 hover:bg-[--primary] cursor-pointer group">
-                <div class="flex justify-center items-center gap-3 cursor-pointer">
-                  <span class="material-symbols-outlined bg-[--primary] group-hover:bg-[--tertiary] rounded-full p-2">savings</span>
-                  <p class="cursor-pointer text-lg">Cofrinho</p>
-                </div>
-                <strong id="saldo-total-contas" class="flex justify-center items-end gap-1 text-xl font-normal cursor-pointer"><span class="text-base font-normal cursor-pointer">R$</span> 1.200,00</strong>
-              </div>
-              <div class="flex justify-between items-center w-full p-3 hover:bg-[--primary] cursor-pointer">
-                <div class="flex justify-center items-center gap-3 cursor-pointer">
-                  <span class="text-lg text-white font-medium bg-purple-600 rounded-full p-[0.450rem] px-2 cursor-pointer">NU</span>
-                  <p class="cursor-pointer text-lg">Nubank</p>
-                </div>
-                <strong id="saldo-total-contas" class="flex justify-center items-end gap-1 text-xl font-normal cursor-pointer"><span class="text-base font-normal cursor-pointer">R$</span> 2.900,00</strong>
-              </div>
-            </div>
-            <a href="contas.html" id="botao-novo" class="flex justify-start items-center gap-5 mt-auto p-1 px-3 mb-3 !mx-3 text-base text-start text-[--secondary] bg-[--primary] rounded-lg hover:text-[--primary] hover:bg-black hover:border-black cursor-pointer">
-              Gerenciar contas
-            </a>
-          </div>
-        </div>
-
-        <div class="flex flex-col items-start bg-[--tertiary] w-full rounded-lg self-start h-full mb-5 overflow-y-auto">
-          <div class="flex justify-start items-center bg-[--primary] py-2 px-3 rounded-t-lg w-full">
-            <h3 class="text-xl">Últimas Transações</h3>
-            <span class="material-symbols-outlined px-2 text-xl">segment</span>
-          </div>
-
-          <div id="transacoes-container" class="!overflow-y-auto h-full w-full">
-
-            <div class="flex justify-between items-center w-full px-3 py-2">
-              <div class="flex justify-center items-center gap-3">
-                <span class="material-symbols-outlined bg-[--primary] rounded-full p-2">savings</span>
-                <p class="text-lg">Dinheiro Reserva</p>
-              </div>
-              <div class="flex flex-col justify-center items-end">
-                <p class="text-sm">10/08/2024</p>
-                <strong id="saldo-total-contas" class="flex justify-center items-end gap-1 text-xl font-normal text-green-600"><span class="text-base font-normal">R$</span> 1.200,00</strong>
-              </div>
-            </div>
-
-            <div class="flex justify-between items-center w-full px-3 py-2">
-              <div class="flex justify-center items-center gap-3">
-                <span class="text-lg text-white font-medium bg-purple-600 rounded-full p-[0.450rem] px-2">NU</span>
-                <p class="text-lg">Salário</p>
-              </div>
-              <div class="flex flex-col justify-center items-end">
-                <p class="text-sm">10/08/2024</p>
-                <strong id="saldo-total-contas" class="flex justify-center items-end gap-1 text-xl font-normal text-green-600"><span class="text-base font-normal">R$</span> 2.900,00</strong>
-              </div>
-            </div>
-
-            <div class="flex justify-between items-center w-full px-3 py-2 border-b-2 border-[--bg]">
-              <div class="flex justify-center items-center gap-3">
-                <span class="material-symbols-outlined bg-[--primary] rounded-full p-2">account_balance_wallet</span>
-                <p class="text-lg">Freela 4</p>
-              </div>
-              <div class="flex flex-col justify-center items-end">
-                <p class="text-sm">10/08/2024</p>
-                <strong id="saldo-total-contas" class="flex justify-center items-end gap-1 text-xl font-normal text-green-600"><span class="text-base font-normal">R$</span> 125,00</strong>
-              </div>
-            </div>
-  
-            <div class="flex justify-between items-center w-full px-3 py-2">
-              <div class="flex justify-center items-center gap-3">
-                <span class="material-symbols-outlined bg-[--primary] rounded-full p-2">account_balance_wallet</span>
-                <p class="text-lg">Freela 3</p>
-              </div>
-              <div class="flex flex-col justify-center items-end">
-                <p class="text-sm">08/08/2024</p>
-                <strong id="saldo-total-contas" class="flex justify-center items-end gap-1 text-xl font-normal text-green-600"><span class="text-base font-normal">R$</span> 125,00</strong>
-              </div>
-            </div>
-
-            <div class="flex justify-between items-center w-full px-3 py-2 border-b-2 border-[--bg]">
-              <div class="flex justify-center items-center gap-3">
-                <span class="material-symbols-outlined bg-[--primary] rounded-full p-2">account_balance_wallet</span>
-                <p class="text-lg">Freela 2</p>
-              </div>
-              <div class="flex flex-col justify-center items-end">
-                <p class="text-sm">08/08/2024</p>
-                <strong id="saldo-total-contas" class="flex justify-center items-end gap-1 text-xl font-normal text-green-600"><span class="text-base font-normal">R$</span> 125,00</strong>
-              </div>
-            </div>
-
-            <div class="flex justify-between items-center w-full px-3 py-2">
-              <div class="flex justify-center items-center gap-3">
-                <span class="material-symbols-outlined bg-[--primary] rounded-full p-2">account_balance_wallet</span>
-                <p class="text-lg">Freela 1</p>
-              </div>
-              <div class="flex flex-col justify-center items-end">
-                <p class="text-sm">07/08/2024</p>
-                <strong id="saldo-total-contas" class="flex justify-center items-end gap-1 text-xl font-normal text-green-600"><span class="text-base font-normal">R$</span> 125,00</strong>
-              </div>
-            </div>
-          </div>
-          
-        </div>
-      </div>
 
       </section>
 
@@ -290,6 +140,7 @@
   -->
 
   <script src="src/js/alterarTema.js"></script>
+  <script src="src/js/popups.js"></script>
 
   <!--ANIMAÇÕES-->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>  <script> AOS.init({ duration: 1000 }); </script>

@@ -1,6 +1,7 @@
 .font-primary {
-  font-family: "Denk One", sans-serif;
+  font-family: "Baloo Bhaijaan 2", sans-serif;
   font-size: 40px !important;
+  font-weight: 600;
 }
 
 .ativo {
@@ -13,44 +14,32 @@
   color: var(--primary) !important;
 }
 
-#transacoes::-webkit-scrollbar-track,
-#dashboard::-webkit-scrollbar-track,
-#transacoes-container::-webkit-scrollbar-track,
-#contas::-webkit-scrollbar-track {
-  margin: 0;
-  background-color: transparent;
-}
-#transacoes-container::-webkit-scrollbar-thumb {
-  border: 3px solid var(--tertiary);
-}
-#contas::-webkit-scrollbar-thumb,
-#transacoes::-webkit-scrollbar-thumb,
-#dashboard::-webkit-scrollbar-thumb {
-  border: 3px solid var(--bg);
-}
-
 input::placeholder {
   color: var(--secondary) !important;
 }
 
-#popup-perfil p:nth-child(1)::before {
+#popup-perfil p:nth-child(1)::before,
+#popup-filtrar_relatorios p:nth-child(1)::before {
   content: '';
   position: absolute;
-  bottom: 100%; /* Posiciona a ponta acima do balão */
-  left: 90px; /* Ajusta a posição horizontal da ponta */
+  bottom: 100%;
+  left: 90px;
   border-width: 10px;
   border-style: solid;
   border-color: transparent transparent var(--primary) transparent;
 }
 #popup-perfil p:nth-child(1):hover::before {
-  border-color: transparent transparent var(--primary) transparent !important;
+  border-color: transparent transparent var(--shadow) transparent !important;
+}
+#popup-filtrar_relatorios p:nth-child(1):hover::before {
+  border-color: transparent transparent var(--theme) transparent !important;
 }
 
 #popup-novo_registro p:nth-child(2)::before {
   content: '';
   position: absolute;
   top: 61px;
-  left: -20px; /* Posição da ponta à esquerda do balão */
+  left: -20px;
   border-width: 10px;
   border-style: solid;
   border-color: transparent var(--primary) transparent transparent;

@@ -42,7 +42,7 @@
           <img src="src/assets/images/lazuly.png" alt="Logo" class="w-10">
           DynDyn
         </h1>
-        <button id="botao-novo" class="flex justify-start items-center gap-5 w-[90%] p-3 my-3 text-lg text-start cursor-pointer text-[--secondary] bg-[--primary] hover:border-[--theme] rounded-xl hover:text-[--primary] hover:bg-[--theme]">
+        <button id="botao-novo_registro" class="flex justify-start items-center gap-5 w-[90%] p-3 my-3 text-lg text-start cursor-pointer text-[--secondary] bg-[--primary] hover:border-[--theme] rounded-xl hover:text-[--primary] hover:bg-[--theme]">
           <span class="material-symbols-outlined text-2xl cursor-pointer">add</span>Novo registro
         </button>
         <nav id="menu" class="flex flex-col list-none border-t-2 border-[--bg] pt-3 w-full">
@@ -68,6 +68,22 @@
           <span class="material-symbols-outlined text-[--secondary] text-2xl cursor-pointer">help</span> Como usar
         </button>
       </div>
+
+      <div id="popup-novo_registro" class="hidden absolute top-[3.2rem] -right-[12.7rem] bg-[--primary] rounded-xl shadow-lg z-10">
+        <p class="flex justify-start items-center text-lg text-[--green] px-3 py-2 hover:bg-[--green] hover:text-white rounded-t-xl cursor-pointer group">
+          <span class="material-symbols-outlined px-1 mr-3 text-[--green] text-2xl bg-green-200 group-hover:bg-white rounded-full cursor-pointer">trending_up</span>
+          Entrada
+        </p>
+        <p class="flex justify-start items-center text-lg text-[--red] px-3 py-2 hover:bg-[--red] hover:text-white cursor-pointer group">
+          <span class="material-symbols-outlined px-1 mr-3 text-[--red] text-2xl bg-red-200 group-hover:bg-white rounded-full cursor-pointer">trending_down</span>
+          Saída
+        </p>
+        <p class="flex justify-start items-center text-lg text-[--theme] px-3 py-2 hover:bg-[--theme] hover:text-white rounded-b-xl cursor-pointer group">
+          <span class="material-symbols-outlined px-1 mr-3 text-[--theme] text-2xl bg-sky-200 group-hover:bg-white rounded-full cursor-pointer">compare_arrows</span>
+          Transferência
+        </p>
+      </div>
+
     </header>
   
     <main id="main" class="relative flex flex-col justify-center items-center list-none w-full bg-[--bg] pr-5 overflow-hidden transition-all h-screen">
@@ -77,13 +93,13 @@
           <h2 class="flex justify-start items-center gap-2 text-xl font-medium"><span class="material-symbols-outlined text-[--secondary] text-2xl">account_balance</span> Contas</h2>
         </div>
         <div id="perfil" class="flex justify-center items-center hover:bg-[--tertiary] gap-3 text-lg px-3 py-2 rounded-xl cursor-pointer group">
-          <span class="material-symbols-outlined text-3xl !text-black cursor-pointer px-1 pb-[0.100rem] mr-1 bg-[--primary] rounded-full">person</span> Seu Nome <span class="material-symbols-outlined cursor-pointer">keyboard_arrow_down</span>
+          <span class="material-symbols-outlined text-3xl !text-black cursor-pointer px-1 pb-[0.100rem] mr-1 bg-[--primary] rounded-full">person</span> Seu Nome <span id="perfil-span" class="material-symbols-outlined cursor-pointer">keyboard_arrow_down</span>
         </div>
 
-        <div id="popup-perfil" class="hidden absolute top-[5.1rem] right-0 w-[206px] bg-[--tertiary] rounded-xl shadow-xl z-10">
-          <p class="flex justify-start items-center gap-3 text-lg px-3 py-2 hover:bg-[--primary] rounded-t-xl cursor-pointer"><span class="material-symbols-outlined text-xl cursor-pointer">account_circle</span>Meu perfil</p>
-          <p class="flex justify-start items-center gap-3 text-lg px-3 py-2 hover:bg-[--primary] cursor-pointer"><span class="material-symbols-outlined text-xl cursor-pointer">settings</span>Configurações</p>
-          <p class="flex justify-start items-center gap-3 text-lg text-[--red] px-3 py-2 hover:bg-[--red] hover:text-white rounded-b-xl cursor-pointer group"><span class="material-symbols-outlined text-[--red] group-hover:text-white text-xl cursor-pointer">logout</span>Sair</p>
+        <div id="popup-perfil" class="hidden absolute top-20 right-0 w-[206px] bg-[--primary] rounded-xl shadow-lg z-10">
+          <p class="flex justify-start items-center gap-3 text-lg px-3 py-2 hover:bg-[--shadow] rounded-t-xl cursor-pointer"><span class="material-symbols-outlined text-2xl cursor-pointer">account_circle</span>Meu perfil</p>
+          <p class="flex justify-start items-center gap-3 text-lg px-3 py-2 hover:bg-[--shadow] cursor-pointer"><span class="material-symbols-outlined text-2xl cursor-pointer">settings</span>Configurações</p>
+          <p class="flex justify-start items-center gap-3 text-lg text-[--red] px-3 py-2 hover:bg-[--red] hover:text-white rounded-b-xl cursor-pointer group"><span class="material-symbols-outlined text-[--red] group-hover:text-white text-2xl cursor-pointer">logout</span>Sair</p>
         </div> 
       </div>
 
@@ -95,9 +111,9 @@
       ██████  ██   ██ ███████ ██   ██ 
       -->
 
-      <section id="contas" class="section flex justify-start items-start gap-5 w-full h-full mb-5 overflow-y-auto overflow-x-hidden">
+      <section id="contas" class="section grid grid-cols-4 justify-start items-start gap-5 w-full h-full mb-5 overflow-y-auto overflow-x-hidden">
 
-        <div class="flex flex-col justify-start items-start w-3/4 h-full">
+        <div class="col-span-3 flex flex-col justify-start items-start h-full">
           <div class="flex gap-3">
             <button class="flex justify-center items-center gap-3 bg-[--tertiary] hover:bg-[--primary] p-3 mb-3 rounded-xl">
               <span class="material-symbols-outlined cursor-pointer">add</span>
@@ -138,7 +154,7 @@
         </div>
         
 
-        <div id="contas-container" class="flex !flex-col justify-start items-center gap-5 w-1/4 h-full">
+        <div id="contas-container" class="col-span-1 flex !flex-col justify-start items-center gap-5 h-full">
 
           <div class="flex flex-col justify-between items-start bg-[--tertiary] rounded-xl w-full min-h-44 self-stretch overflow-hidden">
             <div class="flex justify-start items-center bg-[--primary] py-2 px-3 rounded-t-xl w-full">
@@ -180,6 +196,7 @@
   -->
 
   <script src="src/js/alterarTema.js"></script>
+  <script src="src/js/popups.js"></script>
 
   <!--ANIMAÇÕES-->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>  <script> AOS.init({ duration: 1000 }); </script>

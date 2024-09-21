@@ -9,8 +9,21 @@
 ::-webkit-scrollbar-thumb {
   background-color: var(--primary);
   border-radius: 100px;
-  border: 3px solid var(--tertiary);
+  border: 3px solid var(--bg);
 }
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--theme);
+}
+
+#relatorios-container::-webkit-scrollbar-thumb,
+#painel_transacoes-container::-webkit-scrollbar-thumb,
+#painel_contas-container::-webkit-scrollbar-thumb,
+#relatorios_graficos::-webkit-scrollbar-thumb {
+  border: 3px solid var(--tertiary);
+}
+
+#dashboard::-webkit-scrollbar-track,
+#transacoes::-webkit-scrollbar-track,
+#calculadoras::-webkit-scrollbar-track {
+  margin-bottom: 20px;
 }
