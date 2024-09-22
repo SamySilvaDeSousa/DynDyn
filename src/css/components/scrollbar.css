@@ -16,10 +16,20 @@
 }
 
 #relatorios-container::-webkit-scrollbar-thumb,
+#transacoes-container::-webkit-scrollbar-thumb,
 #painel_transacoes-container::-webkit-scrollbar-thumb,
 #painel_contas-container::-webkit-scrollbar-thumb,
-#relatorios_graficos::-webkit-scrollbar-thumb {
+#relatorios_graficos::-webkit-scrollbar-thumb,
+#contas::-webkit-scrollbar-thumb {
   border: 3px solid var(--tertiary);
+}
+#relatorios-container::-webkit-scrollbar-track,
+#transacoes-container::-webkit-scrollbar-track,
+#painel_transacoes-container::-webkit-scrollbar-track,
+#painel_contas-container::-webkit-scrollbar-track,
+#relatorios_graficos::-webkit-scrollbar-track,
+#contas::-webkit-scrollbar-track {
+  margin: 6px 0px;
 }
 
 #dashboard::-webkit-scrollbar-track,

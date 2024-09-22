@@ -47,3 +47,7 @@ input::placeholder {
 #popup-novo_registro p:nth-child(2):hover::before {
   border-color: transparent var(--red) transparent transparent !important;
 }
+
+#sidebar:hover #fechar-sidebar {
+  display: flex;
+}

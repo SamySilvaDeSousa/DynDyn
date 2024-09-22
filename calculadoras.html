@@ -36,34 +36,37 @@
   -->
 
   <div id="body-container" class="flex gap-5">
-    <header id="sidebar" class="relative flex flex-col justify-between items-start gap-5 bg-[--tertiary] w-[300px]">
-      <div id="sidebar-top" class="flex flex-col justify-center items-center w-full max-h-[680px]">
-        <h1 id="logo" class="flex justify-center items-center gap-3 text-[--theme] text-4xl border-b-2 border-[--bg] py-5 w-full text-center font-primary">
-          DynDyn
-        </h1>
-        <button id="botao-novo_registro" class="flex justify-start items-center gap-5 w-[90%] p-3 my-3 text-lg text-start cursor-pointer text-[--secondary] bg-[--primary] hover:border-[--theme] rounded-xl hover:text-[--primary] hover:bg-[--theme]">
-          <span class="material-symbols-outlined text-2xl cursor-pointer">add</span>Novo registro
+    <header id="sidebar" class="relative flex flex-col justify-between items-start gap-5 bg-[--tertiary] w-[300px] transition-all">
+      <div id="sidebar-top" class="flex flex-col justify-center items-start w-full relative">
+        <h1 id="logo" class="text-[--theme] text-4xl border-b-2 border-[--bg] py-5 w-full text-center font-primary">DynDyn</h1>
+        <button id="fechar-sidebar" class="absolute top-7 -right-3 hidden justify-center items-center bg-[--primary] hover:bg-[--theme] hover:text-white rounded-full">
+          <span class="material-symbols-outlined cursor-pointer">chevron_left</span>
         </button>
-        <nav id="menu" class="flex flex-col list-none border-t-2 border-[--bg] pt-3 w-full overflow-auto">
-          <a href="painel.html" id="nav-dashboard" class="nav-link flex justify-start items-center gap-5 text-[--secondary] bg-[--tertiary] hover:bg-[--shadow] p-3 pl-7 text-lg cursor-pointer group">
-            <span class="material-symbols-outlined text-[--secondary] text-2xl cursor-pointer">home</span> Painel
+        <div class="w-full px-3 overflow-x-hidden">
+          <button id="botao-novo_registro" class="flex justify-start items-center gap-5 w-full py-3 pl-5 my-3 text-lg text-nowrap text-start cursor-pointer text-[--secondary] bg-[--primary] hover:border-[--theme] rounded-xl hover:text-white hover:bg-[--theme]">
+            <span class="material-symbols-outlined text-2xl cursor-pointer">add</span>Novo registro
+          </button>
+        </div>
+        <nav id="menu" class="flex flex-col list-none border-t-2 border-[--bg] pt-3 w-full overflow-x-hidden">
+          <a href="painel.html" id="nav-dashboard" class="nav-link flex justify-start items-center gap-5 bg-[--tertiary] p-3 pl-5 text-lg hover:bg-[--shadow] cursor-pointer">
+            <span class="material-symbols-outlined text-2xl cursor-pointer">home</span> Painel
           </a>
-          <a href="transacoes.html" id="nav-transacoes" class="nav-link flex justify-start items-center gap-5 text-[--secondary] bg-[--tertiary] hover:bg-[--shadow] p-3 pl-7 text-lg cursor-pointer group">
+          <a href="transacoes.html" id="nav-transacoes" class="nav-link flex justify-start items-center gap-5 text-[--secondary] bg-[--tertiary] hover:bg-[--shadow] p-3 pl-5 text-lg cursor-pointer group">
             <span class="material-symbols-outlined text-[--secondary] text-2xl cursor-pointer">segment</span> Transações
           </a>
-          <a href="relatorios.html" id="nav-relatorios" class="nav-link flex justify-start items-center gap-5 text-[--secondary] bg-[--tertiary] hover:bg-[--shadow] p-3 pl-7 text-lg cursor-pointer group">
+          <a href="relatorios.html" id="nav-relatorios" class="nav-link flex justify-start items-center gap-5 text-[--secondary] bg-[--tertiary] hover:bg-[--shadow] p-3 pl-5 text-lg cursor-pointer group">
             <span class="material-symbols-outlined text-[--secondary] text-2xl cursor-pointer">monitoring</span> Relatórios
           </a>
-          <a href="contas.html" id="nav-contas" class="nav-link flex justify-start items-center gap-5 text-[--secondary] bg-[--tertiary] hover:bg-[--shadow] p-3 pl-7 text-lg cursor-pointer group">
+          <a href="contas.html" id="nav-contas" class="nav-link flex justify-start items-center gap-5 text-[--secondary] bg-[--tertiary] hover:bg-[--shadow] p-3 pl-5 text-lg cursor-pointer group">
             <span class="material-symbols-outlined text-[--secondary] text-2xl cursor-pointer">account_balance</span> Contas
           </a>
-          <a id="nav-contas" class="nav-link ativo flex justify-start items-center gap-5 text-[--secondary] bg-[--tertiary] hover:bg-[--shadow] p-3 pl-7 text-lg cursor-pointer group">
+          <a id="nav-contas" class="nav-link ativo flex justify-start items-center gap-5 text-[--secondary] bg-[--tertiary] hover:bg-[--shadow] p-3 pl-5 text-lg cursor-pointer group">
             <span class="material-symbols-outlined text-[--secondary] text-2xl cursor-pointer">calculate</span> Calculadoras
           </a>
         </nav>
       </div>
       <div id="sidebar-bottom" class="w-full">
-        <button id="trocar-tema" class="flex justify-start items-center gap-5 text-[--secondary] bg-[--tertiary] border-none p-3 pl-7 text-lg w-full hover:bg-[--shadow]">
+        <button id="trocar-tema" class="flex justify-start items-center gap-5 text-nowrap text-[--secondary] bg-[--tertiary] border-none p-3 pl-5 text-lg w-full hover:bg-[--shadow] overflow-x-hidden">
           <span class="material-symbols-outlined text-[--secondary] text-2xl cursor-pointer">help</span> Como usar
         </button>
       </div>
@@ -141,6 +144,7 @@
 
   <script src="src/js/alterarTema.js"></script>
   <script src="src/js/popups.js"></script>
+  <script src="src/js/sidebar.js"></script>
 
   <!--ANIMAÇÕES-->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>  <script> AOS.init({ duration: 1000 }); </script>
