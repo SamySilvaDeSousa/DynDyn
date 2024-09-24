@@ -12,6 +12,7 @@
 
 #menu a.ativo span {
   color: var(--primary) !important;
+  cursor: default !important;
 }
 
 input::placeholder {
