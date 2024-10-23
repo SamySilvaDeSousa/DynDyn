@@ -65,12 +65,13 @@
           </a>
         </nav>
       </div>
+      <!--
       <div id="sidebar-bottom" class="w-full">
         <button id="trocar-tema" class="flex justify-start items-center gap-5 text-[--secondary] bg-[--tertiary] border-none p-3 pl-5 text-lg text-nowrap w-full hover:bg-[--shadow] overflow-x-hidden">
           <span class="material-symbols-outlined text-[--secondary] text-2xl cursor-pointer">help</span> Como usar
         </button>
       </div>
-
+      -->
       <div id="popup-novo_registro" class="hidden absolute top-[3.2rem] -right-[12.7rem] bg-[--primary] rounded-xl shadow-lg z-10">
         <p class="flex justify-start items-center text-lg text-[--green] px-3 py-2 hover:bg-[--green] hover:text-white rounded-t-xl cursor-pointer group">
           <span class="material-symbols-outlined px-1 mr-3 text-[--green] text-2xl bg-green-200 group-hover:bg-white rounded-full cursor-pointer">trending_up</span>
@@ -114,37 +115,38 @@
 
       <section id="relatorios" class="section flex flex-col justify-start items-start gap-5 w-full h-full pb-5 overflow-y-auto">
 
-        <div id="relatorios-container" class="flex flex-col items-center bg-[--tertiary] w-full rounded-xl self-start h-max overflow-y-auto">
-          <div class="flex flex-col justify-start items-center gap-5 bg-[--tertiary] p-3 rounded-t-xl w-full">
-            <div class="flex justify-center items-center gap-5 w-full">
-              <span class="material-symbols-outlined text-3xl py-0.5 px-1.5 hover:bg-[--primary] rounded-full cursor-pointer">chevron_left</span>
-              <button class="bg-[--primary] p-3 rounded-xl font-medium hover:bg-[--theme] hover:text-[--primary] hover:border-[--theme]">Setembro | 2024</button>
-              <span class="material-symbols-outlined text-3xl py-0.5 px-1.5 hover:bg-[--primary] rounded-full cursor-pointer">chevron_right</span>
+        <div id="relatorios-container" class="flex flex-col items-center bg-[--tertiary] w-full rounded-xl self-start h-[820px] overflow-y-auto">
+
+          <div class="flex flex-col items-center justify-center border-b-2 border-[--bg] w-full">
+            <div class="flex flex-col justify-start items-center gap-5 bg-[--tertiary] p-3 rounded-t-xl w-full">
+              <div class="flex justify-center items-center gap-5 w-full">
+                <span class="material-symbols-outlined text-3xl py-0.5 px-1.5 hover:bg-[--primary] rounded-full cursor-pointer">chevron_left</span>
+                <button class="bg-[--primary] p-3 rounded-xl font-medium hover:bg-[--theme] hover:text-[--primary] hover:border-[--theme]">Setembro | 2024</button>
+                <span class="material-symbols-outlined text-3xl py-0.5 px-1.5 hover:bg-[--primary] rounded-full cursor-pointer">chevron_right</span>
+              </div>
+            </div>
+            <div class="relative">
+              <button id="botao-filtrar_relatorios" class="flex justify-center items-center gap-2 bg-[--bg] hover:bg-[--primary] p-3 mb-3 rounded-xl">
+                <span class="material-symbols-outlined cursor-pointer">filter_list</span>
+                Filtrar
+              </button>
+              <div id="popup-filtrar_relatorios" class="hidden absolute top-[3.75rem] -right-[3.60rem] w-[206px] bg-[--primary] rounded-xl shadow-lg z-10">
+                <p class="flex justify-start items-center text-lg text-[--theme] px-3 py-2 hover:bg-[--theme] hover:text-white rounded-t-xl cursor-pointer group">
+                  <span class="material-symbols-outlined px-1 mr-3 text-[--theme] text-2xl bg-sky-200 group-hover:bg-white rounded-full cursor-pointer">attach_money</span>
+                  Balanço
+                </p>
+                <p class="flex justify-start items-center text-lg text-[--green] px-3 py-2 hover:bg-[--green] hover:text-white cursor-pointer group">
+                  <span class="material-symbols-outlined px-1 mr-3 text-[--green] text-2xl bg-green-200 group-hover:bg-white rounded-full cursor-pointer">trending_up</span>
+                  Entradas
+                </p>
+                <p class="flex justify-start items-center text-lg text-[--red] px-3 py-2 hover:bg-[--red] hover:text-white rounded-b-xl cursor-pointer group">
+                  <span class="material-symbols-outlined px-1 mr-3 text-[--red] text-2xl bg-red-200 group-hover:bg-white rounded-full cursor-pointer">trending_down</span>
+                  Saídas
+                </p>
+              </div> 
             </div>
           </div>
-          <div class="relative">
-            <button id="botao-filtrar_relatorios" class="flex justify-center items-center gap-2 bg-[--bg] hover:bg-[--primary] p-3 mb-3 rounded-xl">
-              <span class="material-symbols-outlined cursor-pointer">filter_list</span>
-              Filtrar
-            </button>
-            <div id="popup-filtrar_relatorios" class="hidden absolute top-[3.75rem] -right-[3.60rem] w-[206px] bg-[--primary] rounded-xl shadow-lg z-10">
-              <p class="flex justify-start items-center text-lg text-[--theme] px-3 py-2 hover:bg-[--theme] hover:text-white rounded-t-xl cursor-pointer group">
-                <span class="material-symbols-outlined px-1 mr-3 text-[--theme] text-2xl bg-sky-200 group-hover:bg-white rounded-full cursor-pointer">compare_arrows</span>
-                Balanço
-              </p>
-              <p class="flex justify-start items-center text-lg text-[--green] px-3 py-2 hover:bg-[--green] hover:text-white cursor-pointer group">
-                <span class="material-symbols-outlined px-1 mr-3 text-[--green] text-2xl bg-green-200 group-hover:bg-white rounded-full cursor-pointer">trending_up</span>
-                Entradas
-              </p>
-              <p class="flex justify-start items-center text-lg text-[--red] px-3 py-2 hover:bg-[--red] hover:text-white rounded-b-xl cursor-pointer group">
-                <span class="material-symbols-outlined px-1 mr-3 text-[--red] text-2xl bg-red-200 group-hover:bg-white rounded-full cursor-pointer">trending_down</span>
-                Saídas
-              </p>
-            </div> 
-          </div>
           
-
-          <div id="divisoria" class="w-full h-[2px] bg-[--bg]"></div>
 
           <!--
           <div id="grafico" class="flex justify-center items-center hover:bg-green-500 !delay-0 rounded-full w-56 h-56 my-7 cursor-pointer">

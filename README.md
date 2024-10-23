@@ -1,1 +1,3 @@
 # Aplicação Web de Gerenciamento Financeiro
+
+Em produção...
