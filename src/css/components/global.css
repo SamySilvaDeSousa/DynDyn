@@ -24,7 +24,7 @@ input::placeholder {
   content: '';
   position: absolute;
   bottom: 100%;
-  left: 90px;
+  left: 115px;
   border-width: 10px;
   border-style: solid;
   border-color: transparent transparent var(--primary) transparent;
@@ -33,7 +33,7 @@ input::placeholder {
   border-color: transparent transparent var(--shadow) transparent !important;
 }
 #popup-filtrar_relatorios p:nth-child(1):hover::before {
-  border-color: transparent transparent var(--theme) transparent !important;
+  border-color: transparent transparent var(--shadow) transparent !important;
 }
 
 #popup-novo_registro p:nth-child(2)::before {

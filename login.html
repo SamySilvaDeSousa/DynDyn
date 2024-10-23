@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth overflow-x-hidden">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Samy Silva de Sousa">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta property="og:image" content="">
+  <title>DynDyn</title>
+  <link rel="icon" href="/src/assets/images/favicon.png" type="image/x-icon"> <!--FAVICON-->
+
+  <link rel="stylesheet" href="./src/css/main.css"> <!--CSS-->
+  <script src="https://cdn.tailwindcss.com"></script> <!--TAILWIND CDN-->
+
+  <!--ÍCONES-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
+  <link rel="stylesheet" href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <!--ÍCONES-->
+
+</head>
+
+<body class="flex flex-col justify-center items-center relative text-[--secondary] bg-[--bg] overflow-x-hidden">
+
+  <div id="refresh-animation"></div>
+  
+  <main>
+
+    <section class="flex justify-center items-center h-screen">
+
+      <div class="bg-[--tertiary] w-96 h-96 rounded-xl">
+        <h1 id="logo" class="text-[--theme] text-4xl border-b-2 border-[--bg] py-5 mb-5 w-full text-center font-primary">DynDyn</h1>
+        <form class="flex flex-col justify-center items-center px-5 gap-5">
+          <input type="email" class="bg-[--shadow] p-3 rounded-xl w-full cursor-text" placeholder="Email">
+          <input type="password" class="bg-[--shadow] p-3 rounded-xl w-full cursor-text" placeholder="Senha">
+          <p class="page-link">
+            <span class="page-link-label underline cursor-pointer">Esqueci a senha</span>
+          </p>
+          <a href="painel.html" id="botao-novo" class="flex justify-center items-center gap-5 p-2 px-5 !mx-3 w-full text-base text-start text-[--secondary] bg-[--primary] rounded-xl hover:text-[--primary] hover:bg-[--theme] hover:border-[--theme] cursor-pointer">
+            Entrar
+          </a>
+        </form>
+        <p class="flex justify-center items-center mt-5 underline cursor-pointer">
+          Não tenho uma conta
+        </p>
+
+      </div>
+    </section>
+
+  </main>
+
+
+    <!--
+  ███████  ██████ ██████  ██ ██████  ████████ 
+  ██      ██      ██   ██ ██ ██   ██    ██    
+  ███████ ██      ██████  ██ ██████     ██    
+       ██ ██      ██   ██ ██ ██         ██    
+  ███████  ██████ ██   ██ ██ ██         ██   
+  -->
+
+  <script src="src/js/alterarTema.js"></script>
+
+  <!--ANIMAÇÕES-->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>  <script> AOS.init({ duration: 1000 }); </script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <!--ANIMAÇÕES-->
+  
+  <noscript>
+    <div class="noscript">
+      <h1>Habilite o JavaScript!</h1>
+    </div>
+  </noscript>
+
+</body>
+
+</html>
